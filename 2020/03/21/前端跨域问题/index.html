@@ -6,13 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://wufuguo0213.github.io/asuiBlog.github.io">
-  <title>Archives: 2020 | asuiのblog</title>
+  <title>一个解决前端跨域问题的可行方案 | asuiのblog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="asuiのblog">
-<meta property="og:url" content="https://wufuguo0213.github.io/asuiBlog.github.io/archives/2020/index.html">
+  <meta name="description" content="前端跨域问题">
+<meta property="og:type" content="article">
+<meta property="og:title" content="一个解决前端跨域问题的可行方案">
+<meta property="og:url" content="https://wufuguo0213.github.io/asuiBlog.github.io/2020/03/21/%E5%89%8D%E7%AB%AF%E8%B7%A8%E5%9F%9F%E9%97%AE%E9%A2%98/index.html">
 <meta property="og:site_name" content="asuiのblog">
+<meta property="og:description" content="前端跨域问题">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-03-21T12:52:32.000Z">
+<meta property="article:modified_time" content="2020-03-21T12:53:54.456Z">
 <meta property="article:author" content="wufuguo">
 <meta name="twitter:card" content="summary">
   
@@ -167,184 +171,189 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-前端跨域问题" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      一个解决前端跨域问题的可行方案
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/asuiBlog.github.io/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/asuiBlog.github.io/2020/03/21/%E5%89%8D%E7%AB%AF%E8%B7%A8%E5%9F%9F%E9%97%AE%E9%A2%98/" class="archive-article-date">
+
+        
+        <a href="/asuiBlog.github.io/2020/03/21/%E5%89%8D%E7%AB%AF%E8%B7%A8%E5%9F%9F%E9%97%AE%E9%A2%98/" class="archive-article-date">
   	<time datetime="2020-03-21T12:52:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-21</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/asuiBlog.github.io/2020/03/21/%E5%89%8D%E7%AB%AF%E8%B7%A8%E5%9F%9F%E9%97%AE%E9%A2%98/">一个解决前端跨域问题的可行方案</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="前端跨域问题"><a href="#前端跨域问题" class="headerlink" title="前端跨域问题"></a>前端跨域问题</h1><a id="more"></a>
+<p>这两天一直被这个所烦恼，因为想要调试一下微信公众号的接口，看能不能在小程序里使用这些接口，结果一开始就是跨域问题，就是说你返回的<strong>heade</strong>r里没有那个A…，这个还好，可以用<strong>jsonp</strong>技术解决，但是使用jsonp改写代码后，请求成功了但浏览器又给你拦截了，理由是这种行为不安全，即<strong>CORB</strong>（Cross-Origin Read Blocking），今天找了好久终于找到了可行的解决方案。</p>
+<h2 id="1-创建本地服务器"><a href="#1-创建本地服务器" class="headerlink" title="1.创建本地服务器"></a>1.创建本地服务器</h2><p>就是在本地创建一个服务端，不是很难，就我一个后端小白都成功创建了，一般来说，本地服务器端的端口和发出请求的端口也是不一致，也算跨域的，但这个跨域因为服务端在自己手上非常容易解决</p>
+<p>，只需在代码中加入</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">app.all(<span class="string">'*'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">req, res, next</span>) </span>&#123;</span><br><span class="line">    res.header(<span class="string">"Access-Control-Allow-Origin"</span>, <span class="string">"*"</span>)</span><br><span class="line">    res.header(<span class="string">'Access-Control-Allow-Headers'</span>, <span class="string">'Content-Type, Content-Length, Authorization, Accept, X-Requested-With , yourHeaderFeild'</span>)</span><br><span class="line">    res.header(<span class="string">"Access-Control-Allow-Methods"</span>,<span class="string">"PUT,POST,GET,DELETE,OPTIONS"</span>)</span><br><span class="line">    res.header(<span class="string">"X-Powered-By"</span>,<span class="string">' 3.2.1'</span>)</span><br><span class="line">    res.header(<span class="string">"Content-Type"</span>, <span class="string">"application/json;charset=utf-8"</span>)</span><br><span class="line">    next()</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 
-        <div class="article-info info-on-right">
-          
-          
+<p>这一段代码即可，大概意思就是允许所有的端口访问。</p>
+<h2 id="2-利用服务端发送请求"><a href="#2-利用服务端发送请求" class="headerlink" title="2.利用服务端发送请求"></a>2.利用服务端发送请求</h2><p>因为导致跨域问题的主要是同源限制，但后端是可以绕过这个限制的，具体为什么我也不知道，所以只需在服务端发送你的请求即可，代码如下：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">app.get(<span class="string">'/test'</span> , <span class="function"><span class="keyword">function</span> (<span class="params">req , res</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> url = req.query.url</span><br><span class="line">  axios.get(url, &#123;</span><br><span class="line">    headers: &#123;</span><br><span class="line">      referer: <span class="string">'https://api.weixin.qq.com'</span>,</span><br><span class="line">      host: <span class="string">'api.weixin.qq.com'</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;).then(<span class="function">(<span class="params">response</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'微信接口成功'</span>)</span><br><span class="line">    res.json(response.data)</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 
+<p>里面的headers就是把你想要请求的地址的前部分写上去即可，比如：<a href="https://api.weixin.qq.com/cgi-bin/material/batchget_material?type=image&amp;offset=0&amp;count=20&amp;access_token是你想要请求的完整地址，那么只需将其中的https://api.weixin.qq.com写在headers里即可，据说这样可以让对方的服务器以为是自己在请求，但这样真的可以请求成功。" target="_blank" rel="noopener">https://api.weixin.qq.com/cgi-bin/material/batchget_material?type=image&amp;offset=0&amp;count=20&amp;access_token是你想要请求的完整地址，那么只需将其中的https://api.weixin.qq.com写在headers里即可，据说这样可以让对方的服务器以为是自己在请求，但这样真的可以请求成功。</a></p>
+<h2 id="3-参数问题"><a href="#3-参数问题" class="headerlink" title="3.参数问题"></a>3.参数问题</h2><p>这这个demo中，我把需要传的参数都放到了url里，在自己的客户端请求时便把参数放在url传过来，再用req.query来获取，这样可以节省了在自己的服务器端拼接参数的麻烦。</p>
+<p>客户端的代码如下：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">getUserList () &#123;</span><br><span class="line">      <span class="keyword">this</span>.paremsList = &#123;</span><br><span class="line">        url: <span class="string">'https://api.weixin.qq.com/cgi-bin/material/batchget_material?type=image&amp;offset=0&amp;count=20&amp;access_token='</span> + <span class="keyword">this</span>.mytoken</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="keyword">this</span>.paremsList)</span><br><span class="line">      <span class="keyword">this</span>.getData()</span><br><span class="line">    &#125;,</span><br></pre></td></tr></table></figure>
+
+<p>当然当你参数比较多是也可以用params来进行传递，反正它会自动拼接在url中。</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>么么哒~<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="https://i.loli.net/2020/03/19/by3sToYkFitQX7J.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://wufuguo0213.github.io/asuiBlog.github.io/2020/03/21/%E5%89%8D%E7%AB%AF%E8%B7%A8%E5%9F%9F%E9%97%AE%E9%A2%98/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/asuiBlog.github.io/2020/03/20/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%9A%84%E7%AC%AC%E4%B8%89%E6%96%B9%E6%A1%86%E6%9E%B6/" class="archive-article-date">
-  	<time datetime="2020-03-20T05:30:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-20</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/asuiBlog.github.io/2020/03/20/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%9A%84%E7%AC%AC%E4%B8%89%E6%96%B9%E6%A1%86%E6%9E%B6/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">小程序常见的框架</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/asuiBlog.github.io/2020/03/20/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%9A%84%E7%AC%AC%E4%B8%89%E6%96%B9%E6%A1%86%E6%9E%B6/">小程序常见的框架</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#前端跨域问题"><span class="toc-number">1.</span> <span class="toc-text">前端跨域问题</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-创建本地服务器"><span class="toc-number">1.1.</span> <span class="toc-text">1.创建本地服务器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-利用服务端发送请求"><span class="toc-number">1.2.</span> <span class="toc-text">2.利用服务端发送请求</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-参数问题"><span class="toc-number">1.3.</span> <span class="toc-text">3.参数问题</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/asuiBlog.github.io/2020/03/19/%E5%89%8D%E7%AB%AF%E7%AC%94%E8%AE%B0/" class="archive-article-date">
-  	<time datetime="2020-03-19T12:52:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-19</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/asuiBlog.github.io/2020/03/19/%E5%89%8D%E7%AB%AF%E7%AC%94%E8%AE%B0/">学习前端的笔记</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/asuiBlog.github.io/2020/03/18/%E6%98%A5%E5%A4%A9%E6%9D%A5%E4%BA%86/" class="archive-article-date">
-  	<time datetime="2020-03-18T12:22:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-18</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/asuiBlog.github.io/2020/03/18/%E6%98%A5%E5%A4%A9%E6%9D%A5%E4%BA%86/">春天来了</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/asuiBlog.github.io/2020/03/15/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/" class="archive-article-date">
-  	<time datetime="2020-03-15T15:00:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-15</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/asuiBlog.github.io/2020/03/15/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/">我的第一篇文章</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/asuiBlog.github.io/2020/03/11/hello-world/" class="archive-article-date">
-  	<time datetime="2020-03-11T13:22:51.876Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-11</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/asuiBlog.github.io/2020/03/11/hello-world/">Hello World</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -367,8 +376,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
