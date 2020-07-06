@@ -6,20 +6,38 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://wufuguo0213.github.io/asuiBlog.github.io">
-  <title>Vue相关的面经 | asuiのblog</title>
+  <title>前端基础知识总结 | asuiのblog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="MVVM">
+  <meta name="description" content="系统性的回顾一下前端的基础知识">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Vue相关的面经">
-<meta property="og:url" content="https://wufuguo0213.github.io/asuiBlog.github.io/2020/03/28/%E9%9D%A2%E7%BB%8F/index.html">
+<meta property="og:title" content="前端基础知识总结">
+<meta property="og:url" content="https://wufuguo0213.github.io/asuiBlog.github.io/2020/05/20/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/index.html">
 <meta property="og:site_name" content="asuiのblog">
-<meta property="og:description" content="MVVM">
+<meta property="og:description" content="系统性的回顾一下前端的基础知识">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="c:%5CUsers%5CAdministrator%5CDesktop%5C%E5%9B%BE%E7%89%87%E7%AC%94%E8%AE%B0%5Cvue%E4%B8%AD%E7%9A%84diff.png">
 <meta property="og:image" content="c:/Users/Administrator/Desktop/图片笔记/插槽.png">
 <meta property="og:image" content="c:%5CUsers%5CAdministrator%5CDesktop%5C%E5%9B%BE%E7%89%87%E7%AC%94%E8%AE%B0%5C%E7%BC%96%E7%A0%81%E4%BC%98%E5%8C%96.png">
-<meta property="article:published_time" content="2020-03-28T08:22:32.000Z">
-<meta property="article:modified_time" content="2020-07-06T13:37:27.348Z">
+<meta property="og:image" content="https://i.loli.net/2020/03/15/jFy4BwGNVlZY7Sa.png">
+<meta property="og:image" content="https://i.loli.net/2020/03/15/dILpsirm94EaXOV.png">
+<meta property="og:image" content="https://i.loli.net/2020/03/15/69dxNj712MaDgZP.png">
+<meta property="og:image" content="https://i.loli.net/2020/03/15/DMf9eoWIEi1za2Q.png">
+<meta property="og:image" content="https://i.loli.net/2020/03/15/wSNckTQxyW98blJ.png">
+<meta property="og:image" content="https://i.loli.net/2020/03/15/Kz5r1lj8MgPVnXO.png">
+<meta property="og:image" content="https://i.loli.net/2020/03/15/dFHlRYDeOi527jm.png">
+<meta property="og:image" content="https://i.loli.net/2020/03/15/klsnFdpALSw8bQz.png">
+<meta property="og:image" content="https://i.loli.net/2020/03/15/vcNzDdOG3MBwTnE.png">
+<meta property="og:image" content="https://i.loli.net/2020/03/15/UaL1QTu4niklxWZ.png">
+<meta property="og:image" content="https://i.loli.net/2020/03/15/ulWYnvKF2M56tTI.png">
+<meta property="og:image" content="https://i.loli.net/2020/03/15/7AuRtUPGZJ3j1gc.png">
+<meta property="og:image" content="https://i.loli.net/2020/03/15/nk1QUGv8gyXeAzY.png">
+<meta property="og:image" content="https://i.loli.net/2020/03/15/XBpJzRTAEcFGZso.png">
+<meta property="og:image" content="c:/Users/Administrator/Desktop/图片笔记/SPA定义.png">
+<meta property="og:image" content="c:/Users/Administrator/Desktop/图片笔记/子组件的路由规则.png">
+<meta property="og:image" content="c:%5CUsers%5CAdministrator%5CDesktop%5C%E5%9B%BE%E7%89%87%E7%AC%94%E8%AE%B0%5C%E8%B7%AF%E7%94%B1%E4%BC%A0%E5%8F%82.png">
+<meta property="og:image" content="c:%5CUsers%5CAdministrator%5CDesktop%5C%E5%9B%BE%E7%89%87%E7%AC%94%E8%AE%B0%5C%E8%B7%AF%E7%94%B1%E4%BC%A0%E5%8F%822.png">
+<meta property="article:published_time" content="2020-05-20T12:12:22.000Z">
+<meta property="article:modified_time" content="2020-07-06T13:46:23.449Z">
 <meta property="article:author" content="wufuguo">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="c:%5CUsers%5CAdministrator%5CDesktop%5C%E5%9B%BE%E7%89%87%E7%AC%94%E8%AE%B0%5Cvue%E4%B8%AD%E7%9A%84diff.png">
@@ -175,28 +193,236 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-面经" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-前端基础知识总结" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Vue相关的面经
+      前端基础知识总结
     </h1>
   
 
         
-        <a href="/asuiBlog.github.io/2020/03/28/%E9%9D%A2%E7%BB%8F/" class="archive-article-date">
-  	<time datetime="2020-03-28T08:22:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-28</time>
+        <a href="/asuiBlog.github.io/2020/05/20/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/" class="archive-article-date">
+  	<time datetime="2020-05-20T12:12:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-20</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="MVVM"><a href="#MVVM" class="headerlink" title="MVVM"></a>MVVM</h1><a id="more"></a>
-<p> <strong>Mvvm定义</strong>MVVM是Model-View-ViewModel的简写。即模型-视图-视图模型。【模型】指的是后端传递的数据。【视图】指的是所看到的页面。【视图模型】mvvm模式的核心，它是连接view和model的桥梁。它有两个方向：一是将【模型】转化成【视图】，即将后端传递的数据转化成所看到的页面。实现的方式是：数据绑定。二是将【视图】转化成【模型】，即将所看到的页面转化成后端的数据。实现的方式是‘DOM ’事件监听。这两个方向都实现的，我们称之为数据的双向绑定 </p>
+        <h1 id="系统性的回顾一下前端的基础知识"><a href="#系统性的回顾一下前端的基础知识" class="headerlink" title="系统性的回顾一下前端的基础知识"></a>系统性的回顾一下前端的基础知识</h1><a id="more"></a>
+<h1 id="网络层"><a href="#网络层" class="headerlink" title="网络层"></a>网络层</h1><h2 id="http和https"><a href="#http和https" class="headerlink" title="http和https"></a>http和https</h2><p>http： 超文本传输协议，是互联网上应用最为广泛的一种网络协议 ，明文传输</p>
+<p>https：是以安全为目标的HTTP通道，简单讲是HTTP的安全版 ，在传输层用ssl加密，可进行身份认证，握手阶段比较费时，会使页面加载时间延长50%，  缓存不如http高效，会增加数据开销， 证书也需要钱，功能越强大的证书费用越高。 </p>
+<p>区别：http是明文传输不安全，https用ssl加密传输，数据更加的安全，端口不一样</p>
+<h2 id="http2-0"><a href="#http2-0" class="headerlink" title="http2.0"></a>http2.0</h2><p>http2.0相比于http1.0 请求资源所需时间更少，访问速度更快， 内容安全， 允许多路复用 ，将所有的传输信息分割为更小的信息或者帧，并对他们进行二进制编码，首部压缩</p>
+<h2 id="常用的网络请求方法"><a href="#常用的网络请求方法" class="headerlink" title="常用的网络请求方法"></a>常用的网络请求方法</h2><p>get、post、put、delete、</p>
+<p>head： 类似于get请求，只不过返回的响应中没有具体的内容，用户获取报头 </p>
+<p>options： 允许客户端查看服务器的性能，比如说服务器支持的请求方式等等 </p>
+<h2 id="GET和POST的区别"><a href="#GET和POST的区别" class="headerlink" title="GET和POST的区别"></a>GET和POST的区别</h2><p>get参数通过url传递，post放在request body中。</p>
+<p>get请求在url中传递的参数是有长度限制的，而post没有。</p>
+<p>get比post更不安全，因为参数直接暴露在url中，所以不能用来传递敏感信息。</p>
+<p>get请求只能进行url编码，而post支持多种编码方式</p>
+<p>get请求会浏览器主动cache，而post不会。</p>
+<p>get请求参数会被完整保留在浏览历史记录里，而post中的参数不会被保留。</p>
+<h2 id="TCP和UDP"><a href="#TCP和UDP" class="headerlink" title="TCP和UDP"></a>TCP和UDP</h2><p>TCP：面向连接，可靠的访问，只能1对1，首部20字节，字节流</p>
+<p>UDP：无连接，不可靠传输，支持1对1和1对多，首部8字节，数据流</p>
+<h2 id="WebSocket"><a href="#WebSocket" class="headerlink" title="WebSocket"></a>WebSocket</h2><p> WebSocket是HTML5中的协议，支持持久连续， </p>
+<h2 id="常见状态码"><a href="#常见状态码" class="headerlink" title="常见状态码"></a>常见状态码</h2><p>100  Continue  继续。客户端应继续其请求</p>
+<p>101  Switching Protocols  切换协议。服务器根据客户端的请求切换协议。只能切换到更高级的协议，例如，切换到HTTP的新版本协议</p>
+<p><strong>200  OK  请求成功。一般用于GET与POST请求</strong></p>
+<p>201  Created  已创建。成功请求并创建了新的资源</p>
+<p>202  Accepted  已接受。已经接受请求，但未处理完成</p>
+<p>203  Non-Authoritative Information  非授权信息。请求成功。但返回的meta信息不在原始的服务器，而是一个副本</p>
+<p>204  No Content  无内容。服务器成功处理，但未返回内容。在未更新网页的情况下，可确保浏览器继续显示当前文档</p>
+<p>205  Reset Content  重置内容。服务器处理成功，用户终端（例如：浏览器）应重置文档视图。可通过此返回码清除浏览器的表单域</p>
+<p>206  Partial Content  部分内容。服务器成功处理了部分GET请求</p>
+<p>300  Multiple Choices  多种选择。请求的资源可包括多个位置，相应可返回一个资源特征与地址的列表用于用户终端（例如：浏览器）选择</p>
+<p><strong>301  Moved Permanently  永久移动。请求的资源已被永久的移动到新URI，返回信息会包括新的URI，浏览器会自动定向到新URI。今后任何新的请求都应使用新的URI代替</strong></p>
+<p><strong>302  Found  临时移动。与301类似。但资源只是临时被移动。客户端应继续使用原有URI</strong></p>
+<p>303  See Other  查看其它地址。与301类似。使用GET请求查看</p>
+<p>304  Not Modified  未修改。所请求的资源未修改，服务器返回此状态码时，不会返回任何资源。客户端通常会缓存访问过的资源，通过提供一个头信息指出客户端希望只返回在指定日期之后修改的资源</p>
+<p>305  Use Proxy  使用代理。所请求的资源必须通过代理访问</p>
+<p><strong>306  Unused  已经被废弃的HTTP状态码</strong></p>
+<p>307  Temporary Redirect  临时重定向。与302类似。使用GET和post请求重定向</p>
+<p><strong>400  Bad Request  客户端请求的语法错误，服务器无法理解</strong></p>
+<p><strong>401  Unauthorized  请求要求用户的身份认证</strong></p>
+<p>402  Payment Required  保留，将来使用</p>
+<p><strong>403  Forbidden  服务器理解请求客户端的请求，但是拒绝执行此请求</strong></p>
+<p><strong>404  Not Found  服务器无法根据客户端的请求找到资源（网页）。通过此代码，网站设计人员可设置”您所请求的资源无法找到”的个性页面</strong></p>
+<p>405  Method Not Allowed  客户端请求中的方法被禁止</p>
+<p>406  Not Acceptable  服务器无法根据客户端请求的内容特性完成请求</p>
+<p>407  Proxy Authentication Required  请求要求代理的身份认证，与401类似，但请求者应当使用代理进行授权</p>
+<p><strong>408  Request Time-out  服务器等待客户端发送的请求时间过长，超时</strong></p>
+<p>409  Conflict  服务器完成客户端的PUT请求是可能返回此代码，服务器处理请求时发生了冲突</p>
+<p>410  Gone  客户端请求的资源已经不存在。410不同于404，如果资源以前有现在被永久删除了可使用410代码，网站设计人员可通过301代码指定资源的新位置</p>
+<p>411  Length Required  服务器无法处理客户端发送的不带Content-Length的请求信息</p>
+<p>412  Precondition Failed  客户端请求信息的先决条件错误</p>
+<p>413  Request Entity Too Large  由于请求的实体过大，服务器无法处理，因此拒绝请求。为防止客户端的连续请求，服务器可能会关闭连接。如果只是服务器暂时无法处理，则会包含一个Retry-After的响应信息</p>
+<p>414  Request-URI Too Large  请求的URI过长（URI通常为网址），服务器无法处理</p>
+<p>415  Unsupported Media Type  服务器无法处理请求附带的媒体格式</p>
+<p>416  Requested range not satisfiable  客户端请求的范围无效</p>
+<p>417  Expectation Failed  服务器无法满足Expect的请求头信息</p>
+<p><strong>500  Internal Server Error  服务器内部错误，无法完成请求</strong></p>
+<p>501  Not Implemented  服务器不支持请求的功能，无法完成请求</p>
+<p>502  Bad Gateway  作为网关或者代理工作的服务器尝试执行请求时，从远程服务器接收到了一个无效的响应</p>
+<p><strong>503  Service Unavailable  由于超载或系统维护，服务器暂时的无法处理客户端的请求。延时的长度可包含在服务器的Retry-After头信息中</strong></p>
+<p>504  Gateway Time-out  充当网关或代理的服务器，未及时从远端服务器获取请求</p>
+<p>505  HTTP Version not supported  服务器不支持请求的HTTP协议的版本，无法完成处理</p>
+<h2 id="强缓存和协商缓存"><a href="#强缓存和协商缓存" class="headerlink" title="强缓存和协商缓存"></a>强缓存和协商缓存</h2><p>强缓存：直接从缓存取</p>
+<p>协商缓存：先询问服务器缓存是否可用</p>
+<h1 id="浏览器"><a href="#浏览器" class="headerlink" title="浏览器"></a>浏览器</h1><h2 id="BOM"><a href="#BOM" class="headerlink" title="BOM"></a>BOM</h2><p> Bom是浏览器对象 </p>
+<h2 id="常用的Bom属性"><a href="#常用的Bom属性" class="headerlink" title="常用的Bom属性"></a>常用的Bom属性</h2><p> location.href– 返回或设置当前文档的URL </p>
+<p> location.hash – 返回URL#后面的内容，如果没有#，返回空 </p>
+<p> location.assign – 设置当前文档的URL </p>
+<p> location.reload() – 重载当前页面</p>
+<p> history.go() – 前进或后退指定的页面数 history.go(num)</p>
+<p> history.back() – 后退一页</p>
+<p> history.forward() – 前进一页 </p>
+<p> navigator.userAgent – 返回用户代理头的字符串表示(就是包括浏览器版本信息等的字符串)</p>
+<p> navigator.cookieEnabled – 返回浏览器是否支持(启用)cookie</p>
+<h2 id="Cookie、sessionStorage、localStorage的区别"><a href="#Cookie、sessionStorage、localStorage的区别" class="headerlink" title="Cookie、sessionStorage、localStorage的区别"></a>Cookie、sessionStorage、localStorage的区别</h2><p>cookie：在http请求中携带，在浏览器和服务器之间来回传递，大小4K左右，可用于保存用户登录状态等不重要信息</p>
+<p>sessionStorage：仅在当前浏览器窗口关闭前有效</p>
+<p>localStorage：不主动删除前一直有效</p>
+<h2 id="cookie和session的区别"><a href="#cookie和session的区别" class="headerlink" title="cookie和session的区别"></a>cookie和session的区别</h2><p>cookie数据存放在客户的浏览器上，session数据放在服务器上。</p>
+<p>cookie不是很安全，别人可以分析存放在本地的COOKIE并进行COOKIE欺骗<br>考虑到安全应当使用session。</p>
+<p>session会在一定时间内保存在服务器上。当访问增多，会比较占用你服务器的性能<br>考虑到减轻服务器性能方面，应当使用COOKIE。</p>
+<p>单个cookie保存的数据不能超过4K，很多浏览器都限制一个站点最多保存20个cookie。</p>
+<h2 id="输入一个URL-到这个页面呈现出来，中间发生什么"><a href="#输入一个URL-到这个页面呈现出来，中间发生什么" class="headerlink" title="输入一个URL,到这个页面呈现出来，中间发生什么"></a>输入一个URL,到这个页面呈现出来，中间发生什么</h2><p>解析URL</p>
+<p>查看缓存</p>
+<p>通过DNS请求ip地址</p>
+<p>构建http请求</p>
+<p>tcp连接</p>
+<p>获取返回的数据</p>
+<p>解析html渲染页面</p>
+<h2 id="白屏和FOUC"><a href="#白屏和FOUC" class="headerlink" title="白屏和FOUC"></a>白屏和FOUC</h2><p> 白屏：有些浏览器渲染机制（比如chrome）要先构建 DOM 树和 CSSOM 树，构建完成后再进行渲染，如果 CSS 部分放在 HTML 尾部，由于 CSS 未加载完成，浏览器迟迟未渲染，从而导致白屏；也可能是把 js 文件放在头部，脚本的加载会阻塞后面文档内容的解析，从而页面迟迟未渲染出来，出现白屏问题。</p>
+<p>FOUC：主要指的是样式闪烁的问题，由于浏览器渲染机制（比如firefox），在 CSS 加载之前，先呈现了 HTML，就会导致展示出无样式内容，然后样式突然呈现的现象。会出现这个问题的原因主要是 css 加载时间过长，或者 css 被放在了文档底部</p>
+<h1 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h1><h2 id="新特性"><a href="#新特性" class="headerlink" title="新特性"></a>新特性</h2><p>标签语义化： 语义化标签是指正确的标签包含了正确的内容，结构良好，便于阅读 </p>
+<p>表单 ： 为input增加了color，emial,data ,range等类型 </p>
+<p>存储 ： sessionStorage，localStorage,和离线存储  </p>
+<p>多媒体 ： audio和vedio </p>
+<p>另外还有地理定位，canvas画布，拖放，多线程编程的web worker和websocket协议 </p>
+<h2 id="Canvas和Svg的区别"><a href="#Canvas和Svg的区别" class="headerlink" title="Canvas和Svg的区别"></a>Canvas和Svg的区别</h2><p>canvas：用js绘制2D图像，逐像素渲染，缩放会失真</p>
+<p>svg：用xml描述2D图像，保存的是图像的绘制方法，缩放不会失真</p>
+<h2 id="iframe"><a href="#iframe" class="headerlink" title="iframe"></a>iframe</h2><p> iframe元素会创建包含另一个文档的内联框架 ，会阻塞主页面的onload事件，搜索引擎无法解读这种页面，不利于SEO</p>
+<h2 id="Doctype"><a href="#Doctype" class="headerlink" title="Doctype"></a>Doctype</h2><p> Doctype声明于文档最前面，告诉浏览器以何种方式来渲染页面， 这里有两种模式，严格模式和混杂模式。</p>
+<p> 严格模式的排版和JS 运作模式是 以该浏览器支持的最高标准运行。</p>
+<p> 混杂模式，向后兼容，模拟老式浏览器，防止浏览器无法兼容页面。</p>
+<h2 id="离线文档"><a href="#离线文档" class="headerlink" title="离线文档"></a>离线文档</h2><p>可将元素离线后再进行操作，如将元素display：none后再操作该元素</p>
+<h1 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h1><h2 id="css3"><a href="#css3" class="headerlink" title="css3"></a>css3</h2><p> CSS3边框如border-radius，box-shadow等；背景如background-size，background-origin等；   2D，3D转换如transform等；动画如animation </p>
+<h2 id="link和-import"><a href="#link和-import" class="headerlink" title="link和@import"></a>link和@import</h2><p>link：html标签，同时加载，兼容性好</p>
+<p>@import：css，等到页面加载完毕再加载，IE5+</p>
+<h2 id="画一条0-5px-的线"><a href="#画一条0-5px-的线" class="headerlink" title="画一条0.5px 的线"></a>画一条0.5px 的线</h2><p>给一个before，宽高设置为200%，用绝对定位，给一个1px 的边框，再用 transform: scale(0.5,0.5) 缩放，然后用 transform-origin：0 0设置旋转点</p>
+<h2 id="画一个三角形"><a href="#画一个三角形" class="headerlink" title="画一个三角形"></a>画一个三角形</h2><p>给div设置宽高为0，给一个border，其中一条设置颜色，其余3条设置透明色transparent即可</p>
+<h2 id="盒模型"><a href="#盒模型" class="headerlink" title="盒模型"></a>盒模型</h2><p> 标准盒子模型：  box-sizing:content-box ，盒子宽度： content</p>
+<p> IE盒子模型：  box-sizing:border-box 盒子宽度：border+padding+content</p>
+<h2 id="重绘和回流"><a href="#重绘和回流" class="headerlink" title="重绘和回流"></a>重绘和回流</h2><p>重绘：元素的属性改变不会影响页面的布局，如color，background-color，border-radius等</p>
+<p>回流：属性改变影响页面的布局，如height，width，添加删除元素等</p>
+<p>减少重绘的方法：修改样式较多时直接修改className，少用table</p>
+<p>减少回流的方法：<strong>DOM 元素离线更新</strong>：当对 DOM 进行相关操作时，例、appendChild 等都可以使用 Document Fragment 对象进行离线操作，带元素“组装”完成后再一次插入页面，或者使用 display:none 对元素隐藏，在元素“消失”后进行相关操作。<strong>将没用的元素设为不可见</strong>：visibility: hidden，这样可以减小重绘的压力，必要的时候再将元素显示。<strong>压缩 DOM 的深度</strong>，一个渲染层内不要有过深的子元素，<strong>少用 DOM 完成页面样式</strong>，多使用伪元素或者 box-shadow 取代。<strong>图片在渲染前指定大小</strong>：因为 img 元素是内联元素，所以在加载图片后会改变宽高，严重的情况会导致整个页面重排，所以最好在渲染前就指定其大小，或者让其脱离文档流</p>
+<h2 id="实现垂直居中的几种方法"><a href="#实现垂直居中的几种方法" class="headerlink" title="实现垂直居中的几种方法"></a>实现垂直居中的几种方法</h2><p>文字：line-heught和text-align：center</p>
+<p>盒子：定位+top：50%；left：50%；margin-top：-50%；margin-left：-50%</p>
+<p>​             定位+top：50%；left：50%；transform：translate（-50%，-50%）</p>
+<p>​             margin：auto</p>
+<p>​             如果是flex盒子可以用justify-content：center；align-items：center</p>
+<h2 id="清除浮动的方法"><a href="#清除浮动的方法" class="headerlink" title="清除浮动的方法"></a>清除浮动的方法</h2><p>给父元素加overflow：hidden</p>
+<p>添加一个空div，给div添加类，设置类clear：both</p>
+<h2 id="隐藏元素的方法"><a href="#隐藏元素的方法" class="headerlink" title="隐藏元素的方法"></a>隐藏元素的方法</h2><p>opacity=0，该元素隐藏起来了，但不会改变页面布局，并且，如果该元素已经绑定一些事件，如click事件，那么点击该区域，也能触发点击事件的</p>
+<p>visibility=hidden，该元素隐藏起来了，但不会改变页面布局，但是不会触发该元素已经绑定的事件</p>
+<p>display=none，把元素隐藏起来，并且会改变页面布局，可以理解成在页面中把该元素删除掉一样。 </p>
+<h2 id="手写动画的最小时间间隔"><a href="#手写动画的最小时间间隔" class="headerlink" title="手写动画的最小时间间隔"></a>手写动画的最小时间间隔</h2><p>多数显示器默认频率是60Hz，即1秒刷新60次，所以理论上最小间隔为1/60*1000ms＝16.7ms</p>
+<h1 id="Js"><a href="#Js" class="headerlink" title="Js"></a>Js</h1><h2 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h2><p> 闭包就是能够读取其他函数内部变量的函数，或者子函数在外调用，子函数所在的父函数的作用域不会被释放 </p>
+<p>闭包的特点：让外部访问函数内部变量成为可能、局部变量会常驻内存中、可以避免使用全局变量，防止全局变量污染、会造成内存泄露（有一块内存被长期占用，得不到释放）</p>
+<h2 id="类的创建与继承"><a href="#类的创建与继承" class="headerlink" title="类的创建与继承"></a>类的创建与继承</h2><p>// 定义一个动物类</p>
+<p>function Animal (name) {</p>
+<p>// 属性</p>
+<p>this.name = name || ‘Animal’;</p>
+<p>// 实例方法</p>
+<p>this.sleep = function(){</p>
+<p>console.log(this.name + ‘正在睡觉！’);</p>
+<p>}</p>
+<p>}</p>
+<p>// 原型方法</p>
+<p>Animal.prototype.eat = function(food) {</p>
+<p>console.log(this.name + ‘正在吃：’ + food);</p>
+<p>};</p>
+<p>这样就生成了一个Animal类，实力化生成对象后，有方法和属性</p>
+<p>类的继承：</p>
+<p><strong>原型链继承</strong>：特点：基于原型链，既是父类的实例，也是子类的实例。缺点：无法实现多继承</p>
+<p><strong>构造继承</strong>： 使用父类的构造函数来增强子类实例，等于是复制父类的实例属性给子类 。特点：可以实现多继承。缺点：只能继承父类实例的属性和方法，不能继承原型上的属性和方法。</p>
+<p> 实例继承和拷贝继承 </p>
+<p> <strong>组合继承</strong>：相当于构造继承和原型链继承的组合体。通过调用父类构造，继承父类的属性并保留传参的优点，然 后通过将父类实例作为子类原型，实现函数复用 。特点：可以继承实例属性/方法，也可以继承原型属性/方法。缺点：调用了两次父类构造函数，生成了两份实例</p>
+<p> <strong>寄生组合继承</strong>：通过寄生方式，砍掉父类的实例属性，这样，在调用两次父类的构造的时候，就不会初始化两次实例方法/属性 </p>
+<h2 id="事件捕获和冒泡"><a href="#事件捕获和冒泡" class="headerlink" title="事件捕获和冒泡"></a>事件捕获和冒泡</h2><p>事件冒泡：就是元素自身的事件被触发后，如果父元素有相同的事件，如onclick事件，那么元素本身的触发状态就会传递，也就是冒到父元素，父元素的相同事件也会一级一级根据嵌套关系向外触发，直到document/window，冒泡过程结束。 </p>
+<p><strong>事件委托</strong>： 事件委托指的是，不在事件的发生地（直接dom）上设置监听函数，而是在其父元素上设置监听函数，通过事件冒泡，父元素可以监听到子元素上事件的触发，通过判断事件发生元素DOM的类型，来做出不同的响应。 ul和li 。<strong>好处</strong>：比较合适动态元素的绑定，新添加的子元素也会有监听函数，也可以有事件触发机制。 </p>
+<h2 id="图片的懒加载和预加载"><a href="#图片的懒加载和预加载" class="headerlink" title="图片的懒加载和预加载"></a>图片的懒加载和预加载</h2><p>懒加载：懒加载的主要目的是作为服务器前端的优化，减少请求数或延迟请求数。</p>
+<p>预加载：提前加载图片，当用户需要查看时可直接从本地缓存中渲染。</p>
+<h2 id="new操作符做了哪些事情"><a href="#new操作符做了哪些事情" class="headerlink" title="new操作符做了哪些事情"></a>new操作符做了哪些事情</h2><p> new 操作符新建了一个空对象，这个对象原型指向构造函数的prototype，执行构造函数后返回这个对象。 </p>
+<h2 id="bind，apply，call的区别"><a href="#bind，apply，call的区别" class="headerlink" title="bind，apply，call的区别"></a>bind，apply，call的区别</h2><p> 通过apply和call改变函数的this指向，他们两个函数的第一个参数都是一样的表示要改变指向的那个对象，第二个参数，apply是数组，而call则是arg1,arg2…这种形式。通过bind改变this作用域会返回一个新的函数，这个函数不会马上执行。 </p>
+<h2 id="异步加载js的方法"><a href="#异步加载js的方法" class="headerlink" title="异步加载js的方法"></a>异步加载js的方法</h2><p>defer：加了defer后将并行解析html和js，但js解析完成之后不会立即执行，会等到html解析完成再按照顺序执行，不会阻塞</p>
+<p>async：并行解析html和js，js解析完成立即执行，还是会阻塞</p>
+<p>动态创建script标签，插入到DOM中</p>
+<h2 id="防抖与节流"><a href="#防抖与节流" class="headerlink" title="防抖与节流"></a>防抖与节流</h2><p>防抖：在事件被触发 n 秒后再执行回调，如果在这 n 秒内事件又被触发，则重新计时。</p>
+<p>节流： 规定一个单位时间，在这个单位时间内，只能有一次触发事件的回调函数执行，如果在同一个单位时间内某事件被触发多次，只有一次能生效。</p>
+<h2 id="eval是做什么的"><a href="#eval是做什么的" class="headerlink" title="eval是做什么的"></a>eval是做什么的</h2><p> 它的功能是将对应的字符串解析成js并执行，应该避免使用js，因为非常消耗性能（2次，一次解析成js，一次执行） </p>
+<h2 id="和-以及Object-is的区别"><a href="#和-以及Object-is的区别" class="headerlink" title="==和===以及Object.is的区别"></a>==和===以及Object.is的区别</h2><p>两等号判等，会在比较时进行类型转换。</p>
+<p>三等号判等（判断严格），比较时不进行隐式类型转换，（类型不同则会返回false）。</p>
+<p>Object.is 在三等号判等的基础上特别处理了 NaN 、-0 和 +0 ，保证 -0 和 +0 不再相同，但 Object.is(NaN, NaN) 会返回 true.</p>
+<h2 id="数组去重"><a href="#数组去重" class="headerlink" title="数组去重"></a>数组去重</h2><p>法一：indexOf循环去重</p>
+<p>法二：ES6 Set去重；Array.from(new Set(array))</p>
+<h2 id="virtual-dom"><a href="#virtual-dom" class="headerlink" title="virtual dom"></a>virtual dom</h2><p>用JavaScript 对象结构表示 DOM 树的结构；然后用这个树构建一个真正的 DOM 树，插到文档当中 当状态变更的时候，重新构造一棵新的对象树。然后用新的树和旧的树进行比较，记录两棵树差异 把所记录的差异应用到所构建的真正的DOM树上，视图就更新了。Virtual DOM 本质上就是在 JS 和 DOM 之间做了一个缓存。 </p>
+<h2 id="获得对象上的属性"><a href="#获得对象上的属性" class="headerlink" title="获得对象上的属性"></a>获得对象上的属性</h2><p>for（let I in obj）该方法依次访问一个对象及其原型链中所有可枚举的类型</p>
+<p>object.keys:返回一个数组，包括所有可枚举的属性名称</p>
+<p>object.getOwnPropertyNames:返回一个数组包含不可枚举的属性</p>
+<h2 id="es6"><a href="#es6" class="headerlink" title="es6"></a>es6</h2><p> 增加了let、const声明变量，新的数据类型symbol， 引入了promise和 generator， 实现Class和模块 ，</p>
+<p>箭头函数：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> func = <span class="function"><span class="params">value</span> =&gt;</span> value;</span><br><span class="line">相当于</span><br><span class="line"><span class="keyword">let</span> func = <span class="function"><span class="keyword">function</span> (<span class="params">value</span>) </span>&#123;</span><br><span class="line"><span class="keyword">return</span> value;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>promise： 一种异步编程的解决方案，比传统的解决方案回调函数和事件更合理强大 </p>
+<h2 id="es7"><a href="#es7" class="headerlink" title="es7"></a>es7</h2><p>aysnc和await</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">(<span class="keyword">async</span> () = &gt; &#123;</span><br><span class="line"><span class="keyword">await</span> <span class="keyword">new</span> promise();</span><br><span class="line">&#125;)()</span><br></pre></td></tr></table></figure>
+
+<h1 id="网络请求"><a href="#网络请求" class="headerlink" title="网络请求"></a>网络请求</h1><h2 id="跨域问题"><a href="#跨域问题" class="headerlink" title="跨域问题"></a>跨域问题</h2><p>跨域：是指浏览器不能执行其他网站的脚本。它是由浏览器的同源策略造成的，是浏览器对JavaScript实施的安全限制，那么只要协议、域名、端口有任何一个不同，都被当作是不同的域。跨域原理，即是通过各种方式，避开浏览器的安全限制。 </p>
+<p>解决方法：</p>
+<p><strong>JSONP</strong>：通过动态创建script，src为请求网址，缺点只能get请求且要服务器支持</p>
+<p>window.name + iframe跨域：通过iframe的src属性由外域转向本地域，跨域数据即由iframe的window.name从外域传递到本地域。</p>
+<p>postMessage跨域：可以跨域操作的window属性之一。</p>
+<p><strong>CORS</strong>：服务端设置Access-Control-Allow-Origin即可，前端无须设置，若要带cookie请求，前后端都需要设置。</p>
+<p><strong>代理跨域</strong>：启一个代理服务器，实现数据的转发</p>
+<h2 id="fetch发送2次请求的原因"><a href="#fetch发送2次请求的原因" class="headerlink" title="fetch发送2次请求的原因"></a>fetch发送2次请求的原因</h2><p> 用fetch的post请求的时候，导致fetch 第一次发送了一个Options请求，询问服务器是否支持修改的请求头，如</p>
+<p> 果服务器支持，则在第二次中发送真正的请求。</p>
+<h2 id="ajax解决浏览器缓存问题"><a href="#ajax解决浏览器缓存问题" class="headerlink" title="ajax解决浏览器缓存问题"></a>ajax解决浏览器缓存问题</h2><p> 在ajax发送请求前加上 anyAjaxObj.setRequestHeader(“If-Modified-Since”,”0”)。 </p>
+<p> 在ajax发送请求前加上 anyAjaxObj.setRequestHeader(“Cache-Control”,”no-cache”)。 </p>
+<p> <strong>在URL后面加上一个随机数</strong>： “fresh=” + Math.random()。 </p>
+<p> <strong>在URL后面加上时间戳</strong>：”nowtime=” + new Date().getTime()。 </p>
+<h1 id="网页安全"><a href="#网页安全" class="headerlink" title="网页安全"></a>网页安全</h1><h2 id="XSS"><a href="#XSS" class="headerlink" title="XSS"></a>XSS</h2><p> XSS（跨站脚本攻击）是指攻击者在返回的HTML中嵌入javascript脚本 ，用户输入时可使用过滤一些特殊符号来        避免攻击，对于cookie需要在HTTP头部配上，set-cookie：httponly-这个属性可以防止XSS,它会禁止javascript脚本来访问cookie。</p>
+<h2 id="CSRF"><a href="#CSRF" class="headerlink" title="CSRF"></a>CSRF</h2><p> CSRF：跨站请求伪造，可以理解为攻击者盗用了用户的身份，以用户的名义发送了恶意请求，比如用户登录了一 个网站后，立刻在另一个ｔａｂ页面访问攻击者用来制造攻击的网站，这个网站要求访问刚刚登陆的网站，并发送了一个恶意请求，这时候CSRF就产生了，比如这个制造攻击的网站使用一张图片，但是这种图片的链接却是可以修改数据库的，这时候攻击者就可以以用户的名义操作这个数据库，防御方式的话：使用验证码，检查https头部的refer，使用token </p>
+<h1 id="优化"><a href="#优化" class="headerlink" title="优化"></a>优化</h1><h2 id="前端优化"><a href="#前端优化" class="headerlink" title="前端优化"></a>前端优化</h2><p>降低请求量：合并资源，减少HTTP 请求数，minify / gzip 压缩，webP，lazyLoad。</p>
+<p>加快请求速度：预解析DNS，减少域名数，并行加载，CDN 分发。</p>
+<p>缓存：HTTP 协议缓存请求，离线缓存 manifest，离线数据缓存localStorage。</p>
+<p>渲染：JS/CSS优化加载顺序，服务端渲染，pipeline。</p>
+<h2 id="编码优化"><a href="#编码优化" class="headerlink" title="编码优化"></a>编码优化</h2><p>v-for绑定用事件代理</p>
+<p>SPA使用keep-alive缓存组件</p>
+<p>拆分组件，减少渲染</p>
+<p>适当采用v-if</p>
+<p>使用obj.freeze冻结不需要更改的数据</p>
+<h2 id="加载优化"><a href="#加载优化" class="headerlink" title="加载优化"></a>加载优化</h2><p>路由懒加载</p>
+<p>按需导入第三方</p>
+<p>图片懒加载</p>
+<p>可视区域动态加载</p>
+<h2 id="用户体验优化"><a href="#用户体验优化" class="headerlink" title="用户体验优化"></a>用户体验优化</h2><p>骨架屏</p>
+<p>app壳：首先加载某个组件</p>
+<h2 id="SEO优化"><a href="#SEO优化" class="headerlink" title="SEO优化"></a>SEO优化</h2><p> （1）合理的 title、description、keywords：搜索对着三项的权重逐个减小，title 值强调重点即可，重要关键词出现不要超过2次，而且要靠前，不同页面 title 要有所不同；description 把页面内容高度概括，长度合适，不可过分堆砌关键词，不 同页面 description 有所不同；keywords 列举出重要关键词即可。</p>
+<p> （2）语义化的 HTML 代码，符合 W3C 规范：语义化代码让搜索引擎容易理解网页。</p>
+<p> （3）重要内容 HTML 代码放在最前：搜索引擎抓取 HTML 顺序是从上到下，有的搜索引擎对抓取长度有限制，保证重要内容肯定被抓取。</p>
+<p> （4）重要内容不要用 js 输出：爬虫不会执行 js 获取内容</p>
+<p> （5）少用 iframe：搜索引擎不会抓取 iframe 中的内容</p>
+<p> （6）非装饰性图片必须加 alt</p>
+<p> （7）提高网站速度：网站速度是搜索引擎排序的一个重要指标</p>
+<p>参考： <a href="https://juejin.im/post/5b73ef38f265da281e048e51#heading-10" target="_blank" rel="noopener">https://juejin.im/post/5b73ef38f265da281e048e51#heading-10</a> </p>
+<h1 id="MVVM"><a href="#MVVM" class="headerlink" title="MVVM"></a>MVVM</h1><p> <strong>Mvvm定义</strong>MVVM是Model-View-ViewModel的简写。即模型-视图-视图模型。【模型】指的是后端传递的数据。【视图】指的是所看到的页面。【视图模型】mvvm模式的核心，它是连接view和model的桥梁。它有两个方向：一是将【模型】转化成【视图】，即将后端传递的数据转化成所看到的页面。实现的方式是：数据绑定。二是将【视图】转化成【模型】，即将所看到的页面转化成后端的数据。实现的方式是‘DOM ’事件监听。这两个方向都实现的，我们称之为数据的双向绑定 </p>
 <h1 id="数据的双向绑定"><a href="#数据的双向绑定" class="headerlink" title="数据的双向绑定"></a>数据的双向绑定</h1><p> vue.js 则是采用数据劫持结合发布者-订阅者模式的方式，通过<code>Object.defineProperty()</code>来劫持各个属性的<code>setter</code>，<code>getter</code>，在数据变动时发布消息给订阅者，触发相应的监听回调 </p>
 <h1 id="异步渲染"><a href="#异步渲染" class="headerlink" title="异步渲染"></a>异步渲染</h1><p>优化性能，因为Vue是组件级更新，所以如果你每更新一个数据就去重新渲染组件的话，频繁操作会降低性能，通过异步更新，比如你同时更改了大量的数据，就等你全部更改完成后再去渲染，把相同的watcher过滤掉实现</p>
 <h1 id="nextTick"><a href="#nextTick" class="headerlink" title="nextTick"></a>nextTick</h1><h2 id="宏任务"><a href="#宏任务" class="headerlink" title="宏任务"></a>宏任务</h2><p>都是异步方法，</p>
@@ -221,6 +447,134 @@
 <p>常用的两个属性include（想对哪些进行缓存）和exclude（不想对哪些进行缓存）</p>
 <p>两个生命周期activated和deactivated</p>
 <h1 id="常见性能优化"><a href="#常见性能优化" class="headerlink" title="常见性能优化"></a>常见性能优化</h1><p><img src="C:%5CUsers%5CAdministrator%5CDesktop%5C%E5%9B%BE%E7%89%87%E7%AC%94%E8%AE%B0%5C%E7%BC%96%E7%A0%81%E4%BC%98%E5%8C%96.png" alt=""></p>
+<h1 id="前端SEO"><a href="#前端SEO" class="headerlink" title="前端SEO"></a>前端SEO</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">（1）合理的 title、description、keywords：搜索对着三项的权重逐个减小，title 值强调重点即可，重要关键词出现不要超</span><br><span class="line">     过2次，而且要靠前，不同页面 title 要有所不同；description 把页面内容高度概括，长度合适，不可过分堆砌关键词，不</span><br><span class="line">     同页面 description 有所不同；keywords 列举出重要关键词即可。</span><br><span class="line"></span><br><span class="line"> （2）语义化的 HTML 代码，符合 W3C 规范：语义化代码让搜索引擎容易理解网页。</span><br><span class="line"></span><br><span class="line"> （3）重要内容 HTML 代码放在最前：搜索引擎抓取 HTML 顺序是从上到下，有的搜索引擎对抓取长度有限制，保证重要内容肯定被</span><br><span class="line">     抓取。</span><br><span class="line"></span><br><span class="line"> （4）重要内容不要用 js 输出：爬虫不会执行 js 获取内容</span><br><span class="line"></span><br><span class="line"> （5）少用 iframe：搜索引擎不会抓取 iframe 中的内容</span><br><span class="line"></span><br><span class="line"> （6）非装饰性图片必须加 alt</span><br><span class="line"></span><br><span class="line"> （7）提高网站速度：网站速度是搜索引擎排序的一个重要指标</span><br></pre></td></tr></table></figure>
+
+<h1 id="CSS-优化、提高性能的方法"><a href="#CSS-优化、提高性能的方法" class="headerlink" title="CSS 优化、提高性能的方法"></a>CSS 优化、提高性能的方法</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line">加载性能：</span><br><span class="line"></span><br><span class="line">（1）css压缩：将写好的css进行打包压缩，可以减少很多的体积。</span><br><span class="line">（2）css单一样式：当需要下边距和左边距的时候，很多时候选择:margin:top0bottom0;但margin-bottom:bot</span><br><span class="line">tom;margin-left:left;执行的效率更高。</span><br><span class="line">（3）减少使用@import,而建议使用link，因为后者在页面加载时一起加载，前者是等待页面加载完成之后再进行加载。</span><br><span class="line"></span><br><span class="line">选择器性能：</span><br><span class="line"></span><br><span class="line">（1）关键选择器（keyselector）。选择器的最后面的部分为关键选择器（即用来匹配目标元素的部分）。CSS选择符是从右到</span><br><span class="line">左进行匹配的。当使用后代选择器的时候，浏览器会遍历所有子元素来确定是否是指定的元素等等；</span><br><span class="line"></span><br><span class="line">（2）如果规则拥有ID选择器作为其关键选择器，则不要为规则增加标签。过滤掉无关的规则（这样样式系统就不会浪费时间去匹</span><br><span class="line">配它们了）。</span><br><span class="line"></span><br><span class="line">（3）避免使用通配规则，如*&#123;&#125;计算次数惊人！只对需要用到的元素进行选择。</span><br><span class="line"></span><br><span class="line">（4）尽量少的去对标签进行选择，而是用class。</span><br><span class="line"></span><br><span class="line">（5）尽量少的去使用后代选择器，降低选择器的权重值。后代选择器的开销是最高的，尽量将选择器的深度降到最低，最高不要超过</span><br><span class="line">三层，更多的使用类来关联每一个标签元素。</span><br><span class="line"></span><br><span class="line">（6）了解哪些属性是可以通过继承而来的，然后避免对这些属性重复指定规则。</span><br><span class="line"></span><br><span class="line">渲染性能：</span><br><span class="line"></span><br><span class="line">（1）慎重使用高性能属性：浮动、定位。</span><br><span class="line"></span><br><span class="line">（2）尽量减少页面重排、重绘。</span><br><span class="line"></span><br><span class="line">（3）去除空规则：｛｝。空规则的产生原因一般来说是为了预留样式。去除这些空规则无疑能减少css文档体积。</span><br><span class="line"></span><br><span class="line">（4）属性值为0时，不加单位。</span><br><span class="line"></span><br><span class="line">（5）属性值为浮动小数0.**，可以省略小数点之前的0。</span><br><span class="line"></span><br><span class="line">（6）标准化各种浏览器前缀：带浏览器前缀的在前。标准属性在后。</span><br><span class="line"></span><br><span class="line">（7）不使用@import前缀，它会影响css的加载速度。</span><br><span class="line"></span><br><span class="line">（8）选择器优化嵌套，尽量避免层级过深。</span><br><span class="line"></span><br><span class="line">（9）css雪碧图，同一页面相近部分的小图标，方便使用，减少页面的请求次数，但是同时图片本身会变大，使用时，优劣考虑清楚，再使用。</span><br><span class="line"></span><br><span class="line">（10）正确使用display的属性，由于display的作用，某些样式组合会无效，徒增样式体积的同时也影响解析性能。</span><br><span class="line"></span><br><span class="line">（11）不滥用web字体。对于中文网站来说WebFonts可能很陌生，国外却很流行。webfonts通常体积庞大，而且一些浏</span><br><span class="line">览器在下载webfonts时会阻塞页面渲染损伤性能。</span><br><span class="line"></span><br><span class="line">可维护性、健壮性：</span><br><span class="line"></span><br><span class="line">（1）将具有相同属性的样式抽离出来，整合并通过class在页面中进行使用，提高css的可维护性。</span><br><span class="line">（2）样式与内容分离：将css代码定义到外部css中。</span><br></pre></td></tr></table></figure>
+
+<h1 id="js节流与防抖"><a href="#js节流与防抖" class="headerlink" title="js节流与防抖"></a>js节流与防抖</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 函数防抖： 在事件被触发 n 秒后再执行回调，如果在这 n 秒内事件又被触发，则重新计时。</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 函数节流： 规定一个单位时间，在这个单位时间内，只能有一次触发事件的回调函数执行，如果在同一个单位时间内某事件被触发多次，只有一次能生效。</span><br></pre></td></tr></table></figure>
+
+<h1 id="手写-call、apply-及-bind-函数"><a href="#手写-call、apply-及-bind-函数" class="headerlink" title="手写 call、apply 及 bind 函数"></a>手写 call、apply 及 bind 函数</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; call函数实现</span><br><span class="line">Function.prototype.myCall &#x3D; function(context) &#123;</span><br><span class="line">  &#x2F;&#x2F; 判断调用对象</span><br><span class="line">  if (typeof this !&#x3D;&#x3D; &quot;function&quot;) &#123;</span><br><span class="line">    console.error(&quot;type error&quot;);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  &#x2F;&#x2F; 获取参数</span><br><span class="line">  let args &#x3D; [...arguments].slice(1),</span><br><span class="line">    result &#x3D; null;</span><br><span class="line"></span><br><span class="line">  &#x2F;&#x2F; 判断 context 是否传入，如果未传入则设置为 window</span><br><span class="line">  context &#x3D; context || window;</span><br><span class="line"></span><br><span class="line">  &#x2F;&#x2F; 将调用函数设为对象的方法</span><br><span class="line">  context.fn &#x3D; this;</span><br><span class="line"></span><br><span class="line">  &#x2F;&#x2F; 调用函数</span><br><span class="line">  result &#x3D; context.fn(...args);</span><br><span class="line"></span><br><span class="line">  &#x2F;&#x2F; 将属性删除</span><br><span class="line">  delete context.fn;</span><br><span class="line"></span><br><span class="line">  return result;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; apply 函数实现</span><br><span class="line"></span><br><span class="line">Function.prototype.myApply &#x3D; function(context) &#123;</span><br><span class="line">  &#x2F;&#x2F; 判断调用对象是否为函数</span><br><span class="line">  if (typeof this !&#x3D;&#x3D; &quot;function&quot;) &#123;</span><br><span class="line">    throw new TypeError(&quot;Error&quot;);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  let result &#x3D; null;</span><br><span class="line"></span><br><span class="line">  &#x2F;&#x2F; 判断 context 是否存在，如果未传入则为 window</span><br><span class="line">  context &#x3D; context || window;</span><br><span class="line"></span><br><span class="line">  &#x2F;&#x2F; 将函数设为对象的方法</span><br><span class="line">  context.fn &#x3D; this;</span><br><span class="line"></span><br><span class="line">  &#x2F;&#x2F; 调用方法</span><br><span class="line">  if (arguments[1]) &#123;</span><br><span class="line">    result &#x3D; context.fn(...arguments[1]);</span><br><span class="line">  &#125; else &#123;</span><br><span class="line">    result &#x3D; context.fn();</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  &#x2F;&#x2F; 将属性删除</span><br><span class="line">  delete context.fn;</span><br><span class="line"></span><br><span class="line">  return result;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; bind 函数实现</span><br><span class="line">Function.prototype.myBind &#x3D; function(context) &#123;</span><br><span class="line">  &#x2F;&#x2F; 判断调用对象是否为函数</span><br><span class="line">  if (typeof this !&#x3D;&#x3D; &quot;function&quot;) &#123;</span><br><span class="line">    throw new TypeError(&quot;Error&quot;);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  &#x2F;&#x2F; 获取参数</span><br><span class="line">  var args &#x3D; [...arguments].slice(1),</span><br><span class="line">    fn &#x3D; this;</span><br><span class="line"></span><br><span class="line">  return function Fn() &#123;</span><br><span class="line">    &#x2F;&#x2F; 根据调用方式，传入不同绑定值</span><br><span class="line">    return fn.apply(</span><br><span class="line">      this instanceof Fn ? this : context,</span><br><span class="line">      args.concat(...arguments)</span><br><span class="line">    );</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>回答：</p>
+<p>call 函数的实现步骤：</p>
+<ul>
+<li>1.判断调用对象是否为函数，即使我们是定义在函数的原型上的，但是可能出现使用 call 等方式调用的情况。</li>
+<li>2.判断传入上下文对象是否存在，如果不存在，则设置为 window 。</li>
+<li>3.处理传入的参数，截取第一个参数后的所有参数。</li>
+<li>4.将函数作为上下文对象的一个属性。</li>
+<li>5.使用上下文对象来调用这个方法，并保存返回结果。</li>
+<li>6.删除刚才新增的属性。</li>
+<li>7.返回结果。</li>
+</ul>
+<p>apply 函数的实现步骤：</p>
+<ul>
+<li>1.判断调用对象是否为函数，即使我们是定义在函数的原型上的，但是可能出现使用 call 等方式调用的情况。</li>
+<li>2.判断传入上下文对象是否存在，如果不存在，则设置为 window 。</li>
+<li>3.将函数作为上下文对象的一个属性。</li>
+<li>4.判断参数值是否传入</li>
+<li>4.使用上下文对象来调用这个方法，并保存返回结果。</li>
+<li>5.删除刚才新增的属性</li>
+<li>6.返回结果</li>
+</ul>
+<p>bind 函数的实现步骤：</p>
+<ul>
+<li>1.判断调用对象是否为函数，即使我们是定义在函数的原型上的，但是可能出现使用 call 等方式调用的情况。</li>
+<li>2.保存当前函数的引用，获取其余传入参数值。</li>
+<li>3.创建一个函数返回</li>
+<li>4.函数内部使用 apply 来绑定函数调用，需要判断函数作为构造函数的情况，这个时候需要传入当前函数的 this 给 apply 调用，其余情况都传入指定的上下文对象。</li>
+</ul>
+<h1 id="首屏加载慢以及白屏问题"><a href="#首屏加载慢以及白屏问题" class="headerlink" title="首屏加载慢以及白屏问题"></a>首屏加载慢以及白屏问题</h1><p>cdn分发</p>
+<p>通过在多台服务器部署相同内容，当用户访问时，服务器根据用户跟哪台服务器地理距离小或者哪台服务器此时的压力小来决定哪台服务器响应这个请求。</p>
+<p>后端要做好缓存</p>
+<p>比如搭建缓存服务器、数据库查询缓存、接口缓存。</p>
+<p>http缓存方案</p>
+<p>现在流行的方式是文件hash+强缓存的一个方案。</p>
+<p>前端的资源动态加载</p>
+<p>前端可以做路由动态加载、组件动态加载(offScreen Component)、图片懒加载(offScreen Image)。</p>
+<p>利用好async和defer这两个属性</p>
+<p>如果是独立功能的js文件，可以加入async属性。如果是优先级低且没有依赖的js，我们可以加入defer属性。</p>
+<p>渲染的优先级</p>
+<p>前端可以对接口排优先级，或者对页面的模块排优先级，先请求和渲染优先级高的部分。</p>
+<p>前端做一些接口缓存</p>
+<p>前端也可以做接口缓存，缓存的位置有两个，一个是内存，即保存给变量，另一个是localStorage。比如用户的签到日历（展示用户是否签到），我们可以缓存这样的接口到localStorage，有效期是当天。或者有个列表页，我们总是缓存上次的列表内容到本地，下次加载时，我们先从本地读取缓存，并同时发起请求到服务器获取最新列表。</p>
+<p>页面使用骨架屏</p>
+<p>意思是在首屏加载完成之前，通过渲染一些简单元素进行占位。骨架屏虽然不能提高首屏加载速度，但可以减少用户在首屏等待的急躁情绪。这点很有效，在很多成熟的网站都有大量应用。</p>
+<p>使用ssr渲染</p>
+<p>服务器性能一般都很好，那么可以先在服务器先把vdom计算完成后，再输出给前端，这样可以节约的时间为：计算量/(服务器计算速度 - 客户端计算速度)。第二个是服务器可以把首屏的ajax请求在服务端阶段就完成，这样可以省去和客户端通过tcp传输的时间。</p>
+<p>引入http2.0</p>
+<p>使用http2.0来代替http1.1。当请求较多时，2.0相比1.0的优势会比较明显。</p>
+<p>选择先进的图片格式</p>
+<p>使用 JPEG 2000, JPEG XR, and WebP 的图片格式来代替现有的jpeg和png，当页面图片较多时，这点作用非常明显。</p>
+<p>把部分大容量的图片从BaseLine JPEG切换成Progressive JPEG（<a href="https://link.zhihu.com/?target=https%3A//images.guide/%23choosing-an-image-format">理解这两者的差别</a>）也能缩小体积。</p>
+<p>利用好http压缩</p>
+<p>使用<a href="https://zhuanlan.zhihu.com/p/90427059" target="_blank" rel="noopener">http压缩</a>的效果非常明显。</p>
+<h1 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h1><p>无序列表：输入-之后输入空格<br>有序列表：输入数字+“.”之后输入空格<br>任务列表：-[空格]空格 文字<br>标题：ctrl+数字<br>表格：ctrl+t<br>生成目录：[TOC]按回车<br>选中一整行：ctrl+l<br>选中单词：ctrl+d<br>选中相同格式的文字：ctrl+e<br>跳转到文章开头：ctrl+home<br>跳转到文章结尾：ctrl+end<br>搜索：ctrl+f<br>替换：ctrl+h<br>引用：输入&gt;之后输入空格<br>代码块：ctrl+alt+f<br>加粗：ctrl+b<br>倾斜：ctrl+i<br>下划线：ctrl+u<br>删除线：alt+shift+5<br>插入图片：直接拖动到指定位置即可或者ctrl+shift+i<br>插入链接：ctrl+k</p>
+<h1 id="Axios"><a href="#Axios" class="headerlink" title="Axios"></a>Axios</h1><h2 id="axios普通用法"><a href="#axios普通用法" class="headerlink" title="axios普通用法"></a>axios普通用法</h2><p>axios的官方文档：<a href="http://www.axios-js.com/zh-cn/docs/" target="_blank" rel="noopener">http://www.axios-js.com/zh-cn/docs/</a></p>
+<h2 id="axios在Vue中的用法"><a href="#axios在Vue中的用法" class="headerlink" title="axios在Vue中的用法"></a>axios在Vue中的用法</h2><p>axios+vue 的文档：<a href="http://www.axios-js.com/zh-cn/docs/vue-axios.html" target="_blank" rel="noopener">http://www.axios-js.com/zh-cn/docs/vue-axios.html</a></p>
+<p>使用axios.defaults.baseURL = ‘ 默认地址‘来配置全局的请求的默认地址</p>
+<p>axios在Vue中的用法：</p>
+<p><strong>引用时应写成：   Vue.prototype.axios = axios</strong></p>
+<img src="https://i.loli.net/2020/03/15/jFy4BwGNVlZY7Sa.png" style="zoom: 80%;" />
+
+<h2 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h2><img src="https://i.loli.net/2020/03/15/dILpsirm94EaXOV.png" style="zoom: 67%;" />
+
+<h1 id="Promise"><a href="#Promise" class="headerlink" title="Promise"></a>Promise</h1><p>es6引入的一种异步编程解决方案</p>
+<h2 id="基本用法"><a href="#基本用法" class="headerlink" title="基本用法"></a>基本用法</h2><p><img src="https://i.loli.net/2020/03/15/69dxNj712MaDgZP.png" alt=""></p>
+<h3 id="例1"><a href="#例1" class="headerlink" title="例1"></a>例1</h3><img src="https://i.loli.net/2020/03/15/DMf9eoWIEi1za2Q.png" style="zoom:80%;" />
+
+<h2 id="处理ajax请求"><a href="#处理ajax请求" class="headerlink" title="处理ajax请求"></a>处理ajax请求</h2><img src="https://i.loli.net/2020/03/15/wSNckTQxyW98blJ.png" style="zoom:80%;" />
+
+<h3 id="按顺序处理多条ajax请求"><a href="#按顺序处理多条ajax请求" class="headerlink" title="按顺序处理多条ajax请求"></a>按顺序处理多条ajax请求</h3><img src="https://i.loli.net/2020/03/15/Kz5r1lj8MgPVnXO.png" style="zoom:80%;" />
+
+<p>下一个then函数中的data参数是上一个then中return返回的值</p>
+<h2 id="常用API"><a href="#常用API" class="headerlink" title="常用API"></a>常用API</h2><h3 id="实例方法"><a href="#实例方法" class="headerlink" title="实例方法"></a>实例方法</h3><img src="https://i.loli.net/2020/03/15/dFHlRYDeOi527jm.png" style="zoom: 50%;" />
+
+<h3 id="对象方法"><a href="#对象方法" class="headerlink" title="对象方法"></a>对象方法</h3><img src="https://i.loli.net/2020/03/15/klsnFdpALSw8bQz.png" style="zoom:50%;" />
+
+<p>返回的result也是一个数组，对应相对顺序的p1，p2，p3的返回结果</p>
+<h1 id="fetch"><a href="#fetch" class="headerlink" title="fetch"></a>fetch</h1><h2 id="基本用法-1"><a href="#基本用法-1" class="headerlink" title="基本用法"></a>基本用法</h2><p><img src="https://i.loli.net/2020/03/15/vcNzDdOG3MBwTnE.png" alt=""></p>
+<p>text（）是fetch的API，返回一个promise实例对象，所以后面的then得到的是promise返回的值</p>
+<h2 id="常用配置"><a href="#常用配置" class="headerlink" title="常用配置"></a>常用配置</h2><img src="https://i.loli.net/2020/03/15/UaL1QTu4niklxWZ.png" style="zoom: 67%;" />
+
+<h3 id="post请求"><a href="#post请求" class="headerlink" title="post请求"></a>post请求</h3><p>方法1：字符串参数</p>
+<img src="https://i.loli.net/2020/03/15/ulWYnvKF2M56tTI.png" style="zoom:60%;" />
+
+<p>方法2：json参数</p>
+<p><img src="https://i.loli.net/2020/03/15/7AuRtUPGZJ3j1gc.png" alt=""></p>
+<h3 id="put请求"><a href="#put请求" class="headerlink" title="put请求"></a>put请求</h3><p>put和post请求相似，只需把post改为put即可   </p>
+<h1 id="async-await"><a href="#async-await" class="headerlink" title="async/await"></a>async/await</h1><h2 id="基本用法-2"><a href="#基本用法-2" class="headerlink" title="基本用法"></a>基本用法</h2> <img src="https://i.loli.net/2020/03/15/nk1QUGv8gyXeAzY.png" style="zoom:60%;" />
+
+<p>await后面跟的是一个promise实例对象</p>
+<h2 id="处理多个请求"><a href="#处理多个请求" class="headerlink" title="处理多个请求"></a>处理多个请求</h2><img src="https://i.loli.net/2020/03/15/XBpJzRTAEcFGZso.png" style="zoom: 80%;" />
+
+<h1 id="Vue-router"><a href="#Vue-router" class="headerlink" title="Vue-router"></a>Vue-router</h1><p>路由的本质就是对应关系</p>
+<p>SPA定义：</p>
+<img src="C:\Users\Administrator\Desktop\图片笔记\SPA定义.png" style="zoom:60%;" />
+
+<h2 id="基本使用步骤"><a href="#基本使用步骤" class="headerlink" title="基本使用步骤"></a>基本使用步骤</h2><p>1.引入相关的库文件</p>
+<p>2.添加路由链接</p>
+<p>3.添加路由填充位</p>
+<p>4.定义路由组件</p>
+<p>5.<strong>配置路由规则并创建路由实例</strong></p>
+<p>6.把路由挂载到Vue实例中</p>
+<h2 id="总结方法"><a href="#总结方法" class="headerlink" title="总结方法"></a>总结方法</h2><p>1.项目创建好后删除自带的组件只保留APP.vue，同时清空router里的路由规则（因为是默认直接访问APP.vue的）</p>
+<p>2.创建自己的组件</p>
+<p>3.在路由规则中导入自己的组件和路由，可使用{path: ‘/‘, redirect: ‘/自己的组件名’}</p>
+<p>4.在页面中需要跳转时可使用this. $router.push(‘/组件名’)跳转到对应的组件</p>
+<h2 id="子组件的路由问题"><a href="#子组件的路由问题" class="headerlink" title="子组件的路由问题"></a>子组件的路由问题</h2><p>在组件路由规则中添加</p>
+<p>children: [{ path: ‘/mychild1’, component: mychild1 }, { path: ‘/mychild2’, component: mychild2 }]，</p>
+<p>再在组件需要插入子组件的地方写上<strong><router-view></router-view></strong>标签，</p>
+<p>然后使用this. $router.push(‘/子组件名’)跳转即可</p>
+<p>例子：</p>
+<ol>
+<li><img src="C:\Users\Administrator\Desktop\图片笔记\子组件的路由规则.png" style="zoom:60%;" />
+
+</li>
+</ol>
+<h2 id="路由组件传参"><a href="#路由组件传参" class="headerlink" title="路由组件传参"></a>路由组件传参</h2><p>首先在对应路由规则中将props：true添加，</p>
+<p><img src="C:%5CUsers%5CAdministrator%5CDesktop%5C%E5%9B%BE%E7%89%87%E7%AC%94%E8%AE%B0%5C%E8%B7%AF%E7%94%B1%E4%BC%A0%E5%8F%82.png" alt=""></p>
+<p>然后在组件添加props：[‘参数名’]接收参数</p>
+<p><img src="C:%5CUsers%5CAdministrator%5CDesktop%5C%E5%9B%BE%E7%89%87%E7%AC%94%E8%AE%B0%5C%E8%B7%AF%E7%94%B1%E4%BC%A0%E5%8F%822.png" alt=""></p>
 
       
 
@@ -305,7 +659,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://wufuguo0213.github.io/asuiBlog.github.io/2020/03/28/%E9%9D%A2%E7%BB%8F/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://wufuguo0213.github.io/asuiBlog.github.io/2020/05/20/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -319,18 +673,18 @@
   
 <nav id="article-nav">
   
-    <a href="/asuiBlog.github.io/2020/03/29/eslint%E5%B8%B8%E8%A7%81%E8%A7%84%E5%88%99/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/asuiBlog.github.io/2020/05/30/%E6%89%8B%E6%92%95%E4%BB%A3%E7%A0%81/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          eslint配置
+          一些常见的手撕代码
         
       </div>
     </a>
   
   
-    <a href="/asuiBlog.github.io/2020/03/24/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%9A%84%E7%AC%AC%E4%B8%89%E6%96%B9%E6%A1%86%E6%9E%B6/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">小程序常见的框架</div>
+    <a href="/asuiBlog.github.io/2020/04/22/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91%E6%97%A5%E5%B8%B8/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">第一个小程序</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -357,7 +711,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#MVVM"><span class="toc-number">1.</span> <span class="toc-text">MVVM</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#数据的双向绑定"><span class="toc-number">2.</span> <span class="toc-text">数据的双向绑定</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#异步渲染"><span class="toc-number">3.</span> <span class="toc-text">异步渲染</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#nextTick"><span class="toc-number">4.</span> <span class="toc-text">nextTick</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#宏任务"><span class="toc-number">4.1.</span> <span class="toc-text">宏任务</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#微任务"><span class="toc-number">4.2.</span> <span class="toc-text">微任务</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#computed、watch和method的区别"><span class="toc-number">5.</span> <span class="toc-text">computed、watch和method的区别</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#watch中的deep：true"><span class="toc-number">6.</span> <span class="toc-text">watch中的deep：true</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#生命周期可以做什么"><span class="toc-number">7.</span> <span class="toc-text">生命周期可以做什么</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#created"><span class="toc-number">7.1.</span> <span class="toc-text">created</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#mounted"><span class="toc-number">7.2.</span> <span class="toc-text">mounted</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#beforeUpdate"><span class="toc-number">7.3.</span> <span class="toc-text">beforeUpdate</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#beforeDestoryed"><span class="toc-number">7.4.</span> <span class="toc-text">beforeDestoryed</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#V-for和V-if为什么不能连用"><span class="toc-number">8.</span> <span class="toc-text">V-for和V-if为什么不能连用</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Vue降低diff算法的时间复杂度"><span class="toc-number">9.</span> <span class="toc-text">Vue降低diff算法的时间复杂度</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#v-for为什么要key"><span class="toc-number">10.</span> <span class="toc-text">v-for为什么要key</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#描述组件的渲染和更新过程"><span class="toc-number">11.</span> <span class="toc-text">描述组件的渲染和更新过程</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#组件里的data为什么是一个函数"><span class="toc-number">12.</span> <span class="toc-text">组件里的data为什么是一个函数</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#v-model"><span class="toc-number">13.</span> <span class="toc-text">v-model</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#为什么要使用异步组件"><span class="toc-number">14.</span> <span class="toc-text">为什么要使用异步组件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#作用域插槽"><span class="toc-number">15.</span> <span class="toc-text">作用域插槽</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#keep-alive"><span class="toc-number">16.</span> <span class="toc-text">keep-alive</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#常见性能优化"><span class="toc-number">17.</span> <span class="toc-text">常见性能优化</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#系统性的回顾一下前端的基础知识"><span class="toc-number">1.</span> <span class="toc-text">系统性的回顾一下前端的基础知识</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#网络层"><span class="toc-number">2.</span> <span class="toc-text">网络层</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#http和https"><span class="toc-number">2.1.</span> <span class="toc-text">http和https</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#http2-0"><span class="toc-number">2.2.</span> <span class="toc-text">http2.0</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#常用的网络请求方法"><span class="toc-number">2.3.</span> <span class="toc-text">常用的网络请求方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#GET和POST的区别"><span class="toc-number">2.4.</span> <span class="toc-text">GET和POST的区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#TCP和UDP"><span class="toc-number">2.5.</span> <span class="toc-text">TCP和UDP</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#WebSocket"><span class="toc-number">2.6.</span> <span class="toc-text">WebSocket</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#常见状态码"><span class="toc-number">2.7.</span> <span class="toc-text">常见状态码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#强缓存和协商缓存"><span class="toc-number">2.8.</span> <span class="toc-text">强缓存和协商缓存</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#浏览器"><span class="toc-number">3.</span> <span class="toc-text">浏览器</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#BOM"><span class="toc-number">3.1.</span> <span class="toc-text">BOM</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#常用的Bom属性"><span class="toc-number">3.2.</span> <span class="toc-text">常用的Bom属性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Cookie、sessionStorage、localStorage的区别"><span class="toc-number">3.3.</span> <span class="toc-text">Cookie、sessionStorage、localStorage的区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#cookie和session的区别"><span class="toc-number">3.4.</span> <span class="toc-text">cookie和session的区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#输入一个URL-到这个页面呈现出来，中间发生什么"><span class="toc-number">3.5.</span> <span class="toc-text">输入一个URL,到这个页面呈现出来，中间发生什么</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#白屏和FOUC"><span class="toc-number">3.6.</span> <span class="toc-text">白屏和FOUC</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#HTML"><span class="toc-number">4.</span> <span class="toc-text">HTML</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#新特性"><span class="toc-number">4.1.</span> <span class="toc-text">新特性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Canvas和Svg的区别"><span class="toc-number">4.2.</span> <span class="toc-text">Canvas和Svg的区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#iframe"><span class="toc-number">4.3.</span> <span class="toc-text">iframe</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Doctype"><span class="toc-number">4.4.</span> <span class="toc-text">Doctype</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#离线文档"><span class="toc-number">4.5.</span> <span class="toc-text">离线文档</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#CSS"><span class="toc-number">5.</span> <span class="toc-text">CSS</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#css3"><span class="toc-number">5.1.</span> <span class="toc-text">css3</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#link和-import"><span class="toc-number">5.2.</span> <span class="toc-text">link和@import</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#画一条0-5px-的线"><span class="toc-number">5.3.</span> <span class="toc-text">画一条0.5px 的线</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#画一个三角形"><span class="toc-number">5.4.</span> <span class="toc-text">画一个三角形</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#盒模型"><span class="toc-number">5.5.</span> <span class="toc-text">盒模型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#重绘和回流"><span class="toc-number">5.6.</span> <span class="toc-text">重绘和回流</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#实现垂直居中的几种方法"><span class="toc-number">5.7.</span> <span class="toc-text">实现垂直居中的几种方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#清除浮动的方法"><span class="toc-number">5.8.</span> <span class="toc-text">清除浮动的方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#隐藏元素的方法"><span class="toc-number">5.9.</span> <span class="toc-text">隐藏元素的方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#手写动画的最小时间间隔"><span class="toc-number">5.10.</span> <span class="toc-text">手写动画的最小时间间隔</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Js"><span class="toc-number">6.</span> <span class="toc-text">Js</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#闭包"><span class="toc-number">6.1.</span> <span class="toc-text">闭包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#类的创建与继承"><span class="toc-number">6.2.</span> <span class="toc-text">类的创建与继承</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#事件捕获和冒泡"><span class="toc-number">6.3.</span> <span class="toc-text">事件捕获和冒泡</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#图片的懒加载和预加载"><span class="toc-number">6.4.</span> <span class="toc-text">图片的懒加载和预加载</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#new操作符做了哪些事情"><span class="toc-number">6.5.</span> <span class="toc-text">new操作符做了哪些事情</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#bind，apply，call的区别"><span class="toc-number">6.6.</span> <span class="toc-text">bind，apply，call的区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#异步加载js的方法"><span class="toc-number">6.7.</span> <span class="toc-text">异步加载js的方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#防抖与节流"><span class="toc-number">6.8.</span> <span class="toc-text">防抖与节流</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#eval是做什么的"><span class="toc-number">6.9.</span> <span class="toc-text">eval是做什么的</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#和-以及Object-is的区别"><span class="toc-number">6.10.</span> <span class="toc-text">&#x3D;&#x3D;和&#x3D;&#x3D;&#x3D;以及Object.is的区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#数组去重"><span class="toc-number">6.11.</span> <span class="toc-text">数组去重</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#virtual-dom"><span class="toc-number">6.12.</span> <span class="toc-text">virtual dom</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#获得对象上的属性"><span class="toc-number">6.13.</span> <span class="toc-text">获得对象上的属性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#es6"><span class="toc-number">6.14.</span> <span class="toc-text">es6</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#es7"><span class="toc-number">6.15.</span> <span class="toc-text">es7</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#网络请求"><span class="toc-number">7.</span> <span class="toc-text">网络请求</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#跨域问题"><span class="toc-number">7.1.</span> <span class="toc-text">跨域问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#fetch发送2次请求的原因"><span class="toc-number">7.2.</span> <span class="toc-text">fetch发送2次请求的原因</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ajax解决浏览器缓存问题"><span class="toc-number">7.3.</span> <span class="toc-text">ajax解决浏览器缓存问题</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#网页安全"><span class="toc-number">8.</span> <span class="toc-text">网页安全</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#XSS"><span class="toc-number">8.1.</span> <span class="toc-text">XSS</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CSRF"><span class="toc-number">8.2.</span> <span class="toc-text">CSRF</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#优化"><span class="toc-number">9.</span> <span class="toc-text">优化</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#前端优化"><span class="toc-number">9.1.</span> <span class="toc-text">前端优化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#编码优化"><span class="toc-number">9.2.</span> <span class="toc-text">编码优化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#加载优化"><span class="toc-number">9.3.</span> <span class="toc-text">加载优化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#用户体验优化"><span class="toc-number">9.4.</span> <span class="toc-text">用户体验优化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SEO优化"><span class="toc-number">9.5.</span> <span class="toc-text">SEO优化</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#MVVM"><span class="toc-number">10.</span> <span class="toc-text">MVVM</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#数据的双向绑定"><span class="toc-number">11.</span> <span class="toc-text">数据的双向绑定</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#异步渲染"><span class="toc-number">12.</span> <span class="toc-text">异步渲染</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#nextTick"><span class="toc-number">13.</span> <span class="toc-text">nextTick</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#宏任务"><span class="toc-number">13.1.</span> <span class="toc-text">宏任务</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#微任务"><span class="toc-number">13.2.</span> <span class="toc-text">微任务</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#computed、watch和method的区别"><span class="toc-number">14.</span> <span class="toc-text">computed、watch和method的区别</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#watch中的deep：true"><span class="toc-number">15.</span> <span class="toc-text">watch中的deep：true</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#生命周期可以做什么"><span class="toc-number">16.</span> <span class="toc-text">生命周期可以做什么</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#created"><span class="toc-number">16.1.</span> <span class="toc-text">created</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#mounted"><span class="toc-number">16.2.</span> <span class="toc-text">mounted</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#beforeUpdate"><span class="toc-number">16.3.</span> <span class="toc-text">beforeUpdate</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#beforeDestoryed"><span class="toc-number">16.4.</span> <span class="toc-text">beforeDestoryed</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#V-for和V-if为什么不能连用"><span class="toc-number">17.</span> <span class="toc-text">V-for和V-if为什么不能连用</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Vue降低diff算法的时间复杂度"><span class="toc-number">18.</span> <span class="toc-text">Vue降低diff算法的时间复杂度</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#v-for为什么要key"><span class="toc-number">19.</span> <span class="toc-text">v-for为什么要key</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#描述组件的渲染和更新过程"><span class="toc-number">20.</span> <span class="toc-text">描述组件的渲染和更新过程</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#组件里的data为什么是一个函数"><span class="toc-number">21.</span> <span class="toc-text">组件里的data为什么是一个函数</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#v-model"><span class="toc-number">22.</span> <span class="toc-text">v-model</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#为什么要使用异步组件"><span class="toc-number">23.</span> <span class="toc-text">为什么要使用异步组件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#作用域插槽"><span class="toc-number">24.</span> <span class="toc-text">作用域插槽</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#keep-alive"><span class="toc-number">25.</span> <span class="toc-text">keep-alive</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#常见性能优化"><span class="toc-number">26.</span> <span class="toc-text">常见性能优化</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#前端SEO"><span class="toc-number">27.</span> <span class="toc-text">前端SEO</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#CSS-优化、提高性能的方法"><span class="toc-number">28.</span> <span class="toc-text">CSS 优化、提高性能的方法</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#js节流与防抖"><span class="toc-number">29.</span> <span class="toc-text">js节流与防抖</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#手写-call、apply-及-bind-函数"><span class="toc-number">30.</span> <span class="toc-text">手写 call、apply 及 bind 函数</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#首屏加载慢以及白屏问题"><span class="toc-number">31.</span> <span class="toc-text">首屏加载慢以及白屏问题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#快捷键"><span class="toc-number">32.</span> <span class="toc-text">快捷键</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Axios"><span class="toc-number">33.</span> <span class="toc-text">Axios</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#axios普通用法"><span class="toc-number">33.1.</span> <span class="toc-text">axios普通用法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#axios在Vue中的用法"><span class="toc-number">33.2.</span> <span class="toc-text">axios在Vue中的用法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#实例"><span class="toc-number">33.3.</span> <span class="toc-text">实例</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Promise"><span class="toc-number">34.</span> <span class="toc-text">Promise</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#基本用法"><span class="toc-number">34.1.</span> <span class="toc-text">基本用法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#例1"><span class="toc-number">34.1.1.</span> <span class="toc-text">例1</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#处理ajax请求"><span class="toc-number">34.2.</span> <span class="toc-text">处理ajax请求</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#按顺序处理多条ajax请求"><span class="toc-number">34.2.1.</span> <span class="toc-text">按顺序处理多条ajax请求</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#常用API"><span class="toc-number">34.3.</span> <span class="toc-text">常用API</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#实例方法"><span class="toc-number">34.3.1.</span> <span class="toc-text">实例方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#对象方法"><span class="toc-number">34.3.2.</span> <span class="toc-text">对象方法</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#fetch"><span class="toc-number">35.</span> <span class="toc-text">fetch</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#基本用法-1"><span class="toc-number">35.1.</span> <span class="toc-text">基本用法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#常用配置"><span class="toc-number">35.2.</span> <span class="toc-text">常用配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#post请求"><span class="toc-number">35.2.1.</span> <span class="toc-text">post请求</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#put请求"><span class="toc-number">35.2.2.</span> <span class="toc-text">put请求</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#async-await"><span class="toc-number">36.</span> <span class="toc-text">async&#x2F;await</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#基本用法-2"><span class="toc-number">36.1.</span> <span class="toc-text">基本用法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#处理多个请求"><span class="toc-number">36.2.</span> <span class="toc-text">处理多个请求</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Vue-router"><span class="toc-number">37.</span> <span class="toc-text">Vue-router</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#基本使用步骤"><span class="toc-number">37.1.</span> <span class="toc-text">基本使用步骤</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#总结方法"><span class="toc-number">37.2.</span> <span class="toc-text">总结方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#子组件的路由问题"><span class="toc-number">37.3.</span> <span class="toc-text">子组件的路由问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#路由组件传参"><span class="toc-number">37.4.</span> <span class="toc-text">路由组件传参</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>

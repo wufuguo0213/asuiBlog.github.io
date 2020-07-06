@@ -6,23 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://wufuguo0213.github.io/asuiBlog.github.io">
-  <title>Vue相关的面经 | asuiのblog</title>
+  <title>字节跳动面试刷题 | asuiのblog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="MVVM">
+  <meta name="description" content="字节是梦想啊啊啊">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Vue相关的面经">
-<meta property="og:url" content="https://wufuguo0213.github.io/asuiBlog.github.io/2020/03/28/%E9%9D%A2%E7%BB%8F/index.html">
+<meta property="og:title" content="字节跳动面试刷题">
+<meta property="og:url" content="https://wufuguo0213.github.io/asuiBlog.github.io/2020/06/29/%E5%AD%97%E8%8A%82%E8%B7%B3%E5%8A%A8%E9%9D%A2%E8%AF%95/index.html">
 <meta property="og:site_name" content="asuiのblog">
-<meta property="og:description" content="MVVM">
+<meta property="og:description" content="字节是梦想啊啊啊">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="c:%5CUsers%5CAdministrator%5CDesktop%5C%E5%9B%BE%E7%89%87%E7%AC%94%E8%AE%B0%5Cvue%E4%B8%AD%E7%9A%84diff.png">
-<meta property="og:image" content="c:/Users/Administrator/Desktop/图片笔记/插槽.png">
-<meta property="og:image" content="c:%5CUsers%5CAdministrator%5CDesktop%5C%E5%9B%BE%E7%89%87%E7%AC%94%E8%AE%B0%5C%E7%BC%96%E7%A0%81%E4%BC%98%E5%8C%96.png">
-<meta property="article:published_time" content="2020-03-28T08:22:32.000Z">
-<meta property="article:modified_time" content="2020-07-06T13:37:27.348Z">
+<meta property="og:image" content="c:%5CUsers%5CAdministrator%5CDesktop%5C%E5%9B%BE%E7%89%87%E7%AC%94%E8%AE%B0%5Ctypeof.png">
+<meta property="article:published_time" content="2020-06-29T15:45:52.000Z">
+<meta property="article:modified_time" content="2020-07-06T13:51:57.447Z">
 <meta property="article:author" content="wufuguo">
+<meta property="article:tag" content="字节跳动 大哥">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="c:%5CUsers%5CAdministrator%5CDesktop%5C%E5%9B%BE%E7%89%87%E7%AC%94%E8%AE%B0%5Cvue%E4%B8%AD%E7%9A%84diff.png">
+<meta name="twitter:image" content="c:%5CUsers%5CAdministrator%5CDesktop%5C%E5%9B%BE%E7%89%87%E7%AC%94%E8%AE%B0%5Ctypeof.png">
   
     <link rel="alternative" href="/atom.xml" title="asuiのblog" type="application/atom+xml">
   
@@ -175,52 +174,93 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-面经" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-字节跳动面试" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Vue相关的面经
+      字节跳动面试刷题
     </h1>
   
 
         
-        <a href="/asuiBlog.github.io/2020/03/28/%E9%9D%A2%E7%BB%8F/" class="archive-article-date">
-  	<time datetime="2020-03-28T08:22:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-28</time>
+        <a href="/asuiBlog.github.io/2020/06/29/%E5%AD%97%E8%8A%82%E8%B7%B3%E5%8A%A8%E9%9D%A2%E8%AF%95/" class="archive-article-date">
+  	<time datetime="2020-06-29T15:45:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-29</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="MVVM"><a href="#MVVM" class="headerlink" title="MVVM"></a>MVVM</h1><a id="more"></a>
-<p> <strong>Mvvm定义</strong>MVVM是Model-View-ViewModel的简写。即模型-视图-视图模型。【模型】指的是后端传递的数据。【视图】指的是所看到的页面。【视图模型】mvvm模式的核心，它是连接view和model的桥梁。它有两个方向：一是将【模型】转化成【视图】，即将后端传递的数据转化成所看到的页面。实现的方式是：数据绑定。二是将【视图】转化成【模型】，即将所看到的页面转化成后端的数据。实现的方式是‘DOM ’事件监听。这两个方向都实现的，我们称之为数据的双向绑定 </p>
-<h1 id="数据的双向绑定"><a href="#数据的双向绑定" class="headerlink" title="数据的双向绑定"></a>数据的双向绑定</h1><p> vue.js 则是采用数据劫持结合发布者-订阅者模式的方式，通过<code>Object.defineProperty()</code>来劫持各个属性的<code>setter</code>，<code>getter</code>，在数据变动时发布消息给订阅者，触发相应的监听回调 </p>
-<h1 id="异步渲染"><a href="#异步渲染" class="headerlink" title="异步渲染"></a>异步渲染</h1><p>优化性能，因为Vue是组件级更新，所以如果你每更新一个数据就去重新渲染组件的话，频繁操作会降低性能，通过异步更新，比如你同时更改了大量的数据，就等你全部更改完成后再去渲染，把相同的watcher过滤掉实现</p>
-<h1 id="nextTick"><a href="#nextTick" class="headerlink" title="nextTick"></a>nextTick</h1><h2 id="宏任务"><a href="#宏任务" class="headerlink" title="宏任务"></a>宏任务</h2><p>都是异步方法，</p>
-<h2 id="微任务"><a href="#微任务" class="headerlink" title="微任务"></a>微任务</h2><p>微任务先于宏任务先执行 </p>
-<h1 id="computed、watch和method的区别"><a href="#computed、watch和method的区别" class="headerlink" title="computed、watch和method的区别"></a>computed、watch和method的区别</h1><p>method是只要你把它应用到了模板上，每次一变化，就会重新渲染，每次一更新，方法就要重新执行，性能开销比较大，但computed具有缓存功能，只要它所依赖的属性没有变化，就不会执行。watch和computed的原理都是里面有一个watcher，区别就是computed的watcher具有缓存功能。</p>
-<h1 id="watch中的deep：true"><a href="#watch中的deep：true" class="headerlink" title="watch中的deep：true"></a>watch中的deep：true</h1><p>当用户指定watch的deep属性为true时，如果当前监控的值的数组类型的，会对对象中的每一项进行求值，此时将当前watch存入相对应的属性中，这样数组中对象发生变化时也会通知数据更新</p>
-<h1 id="生命周期可以做什么"><a href="#生命周期可以做什么" class="headerlink" title="生命周期可以做什么"></a>生命周期可以做什么</h1><h2 id="created"><a href="#created" class="headerlink" title="created"></a>created</h2><p>可以进行一些网络请求，获取数据</p>
-<h2 id="mounted"><a href="#mounted" class="headerlink" title="mounted"></a>mounted</h2><p>进行一些DOM操作</p>
-<h2 id="beforeUpdate"><a href="#beforeUpdate" class="headerlink" title="beforeUpdate"></a>beforeUpdate</h2><p>进一步的更改状态，这不会触发附加的重渲染过程</p>
-<h2 id="beforeDestoryed"><a href="#beforeDestoryed" class="headerlink" title="beforeDestoryed"></a>beforeDestoryed</h2><p>执行一些优化操作，比如清空定时器，解除绑定事件（$on）</p>
-<h1 id="V-for和V-if为什么不能连用"><a href="#V-for和V-if为什么不能连用" class="headerlink" title="V-for和V-if为什么不能连用"></a>V-for和V-if为什么不能连用</h1><p>vfor 的优先级比vif要高，如果连用的话会把vif给每个元素都添加上，会造成性能问题，但也可以用，比如你希望有条件的渲染</p>
-<h1 id="Vue降低diff算法的时间复杂度"><a href="#Vue降低diff算法的时间复杂度" class="headerlink" title="Vue降低diff算法的时间复杂度"></a>Vue降低diff算法的时间复杂度</h1><p>diff：比较两个文本的差异</p>
-<p><img src="C:%5CUsers%5CAdministrator%5CDesktop%5C%E5%9B%BE%E7%89%87%E7%AC%94%E8%AE%B0%5Cvue%E4%B8%AD%E7%9A%84diff.png" alt=""></p>
-<h1 id="v-for为什么要key"><a href="#v-for为什么要key" class="headerlink" title="v-for为什么要key"></a>v-for为什么要key</h1><p>因为vue的vfor会复用，如果没有key 的话会造成错误，比如你有3个li，第一个和第三个为true，第二个为false，第一个为选中状态，然后如果你没有key，你删除了第一个li后，第二个li顶上来但它会被选中，这是因为没有key，vfor看你结构一样的直接就复用第一个li了，有key之后就不一样就不会出现这种直接拿过来用的情况。</p>
-<h1 id="描述组件的渲染和更新过程"><a href="#描述组件的渲染和更新过程" class="headerlink" title="描述组件的渲染和更新过程"></a>描述组件的渲染和更新过程</h1><p>渲染组件时，会通过vue.方法构建子组件的构造函数，并进行实例化。最终手动调用$mount（）进行挂载。更新组件时会进行patchVnode流程，核心就是diff算法</p>
-<h1 id="组件里的data为什么是一个函数"><a href="#组件里的data为什么是一个函数" class="headerlink" title="组件里的data为什么是一个函数"></a>组件里的data为什么是一个函数</h1><p>同一个组件被复用多次，会创建多个实例。这些实例用的是同一个构造函数，然后data是一个对象的话。那么所有组件都共享了同一个对象，为了保证组件的数据独立性要求每个组件必须通过data函数返回一个对象作为组件的状态。避免组件间的数据互相影响。 </p>
-<h1 id="v-model"><a href="#v-model" class="headerlink" title="v-model"></a>v-model</h1><p>组件的vmodel是value+input 的语法糖，为什么全是input？因为解析的时候把事件全解析成了input </p>
-<h1 id="为什么要使用异步组件"><a href="#为什么要使用异步组件" class="headerlink" title="为什么要使用异步组件"></a>为什么要使用异步组件</h1><p>减小打包大小，可以采用异步的方式来加载组件。主要依赖import这个语法，可以实现文件的分割加载</p>
-<h1 id="作用域插槽"><a href="#作用域插槽" class="headerlink" title="作用域插槽"></a>作用域插槽</h1><img src="C:\Users\Administrator\Desktop\图片笔记\插槽.png" style="zoom:60%;" />
+        <h1 id="字节是梦想啊啊啊"><a href="#字节是梦想啊啊啊" class="headerlink" title="字节是梦想啊啊啊"></a>字节是梦想啊啊啊</h1><a id="more"></a>
+<h1 id="字节面试刷题"><a href="#字节面试刷题" class="headerlink" title="字节面试刷题"></a>字节面试刷题</h1><h2 id="1-instanceOf实现的原理"><a href="#1-instanceOf实现的原理" class="headerlink" title="1.instanceOf实现的原理"></a>1.instanceOf实现的原理</h2><p>通过原型链判断， A instanceof B，如果A 的__proto指向了B的Prototype，则为true</p>
+<h2 id="2-typeof"><a href="#2-typeof" class="headerlink" title="2.typeof"></a>2.typeof</h2><p>判断基本类型， Undefined,Null,Boolean,Number,String 和一种复杂类型Object，</p>
+<p><img src="C:%5CUsers%5CAdministrator%5CDesktop%5C%E5%9B%BE%E7%89%87%E7%AC%94%E8%AE%B0%5Ctypeof.png" alt=""></p>
+<h2 id="3-js的类型"><a href="#3-js的类型" class="headerlink" title="3.js的类型"></a>3.js的类型</h2><p>Undefined,Null,Boolean,Number,String 和一种复杂类型Object，</p>
+<h2 id="4-给了一段setTimeout、Promise判断输出顺序"><a href="#4-给了一段setTimeout、Promise判断输出顺序" class="headerlink" title="4.给了一段setTimeout、Promise判断输出顺序"></a>4.给了一段setTimeout、Promise判断输出顺序</h2><p>队列任务优先级： promise.Trick()&gt;promise的回调&gt;async&gt;setTimeout&gt;setImmediate， </p>
+<p> then和settimeout执行顺序，即<code>setTimeout(fn, 0)</code>在下一轮“事件循环”开始时执行，<code>Promise.then()</code>在本轮“事件循环”结束时执行。因此then 函数先输出，settimeout后输出。 </p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">async1</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">"async1 start"</span>);<span class="comment">////222222</span></span><br><span class="line">      <span class="keyword">await</span>  async2();</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">"async1 end"</span>)<span class="comment">////66666666</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">async</span>  <span class="function"><span class="keyword">function</span> <span class="title">async2</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">     <span class="built_in">console</span>.log( <span class="string">'async2'</span>);<span class="comment">////3333333</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">"script start"</span>);<span class="comment">////11111111</span></span><br><span class="line">  setTimeout(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">"settimeout"</span>);<span class="comment">////88888888888</span></span><br><span class="line">  &#125;,<span class="number">0</span>);</span><br><span class="line">  async1();</span><br><span class="line">  <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="keyword">function</span> (<span class="params">resolve</span>) </span>&#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">"promise1"</span>);<span class="comment">////4444444</span></span><br><span class="line">      resolve();</span><br><span class="line">  &#125;).then(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">"promise2"</span>);<span class="comment">////777777777</span></span><br><span class="line">  &#125;);</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'script end'</span>);<span class="comment">////555555</span></span><br></pre></td></tr></table></figure>
 
-<h1 id="keep-alive"><a href="#keep-alive" class="headerlink" title="keep-alive"></a>keep-alive</h1><p>keep-alive可以实现组件的缓存，当组件切换时不会对当前组件进行卸载</p>
-<p>常用的两个属性include（想对哪些进行缓存）和exclude（不想对哪些进行缓存）</p>
-<p>两个生命周期activated和deactivated</p>
-<h1 id="常见性能优化"><a href="#常见性能优化" class="headerlink" title="常见性能优化"></a>常见性能优化</h1><p><img src="C:%5CUsers%5CAdministrator%5CDesktop%5C%E5%9B%BE%E7%89%87%E7%AC%94%E8%AE%B0%5C%E7%BC%96%E7%A0%81%E4%BC%98%E5%8C%96.png" alt=""></p>
+<h2 id="5-事件循环"><a href="#5-事件循环" class="headerlink" title="5.事件循环"></a>5.事件循环</h2><p>利用任务队列来执行异步代码， 同步和异步任务分别进入不同的执行环境，同步的进入主线程，即主执行栈，异步的进入 Event Queue 。主线程内的任务执行完毕为空，会去 Event Queue 读取对应的任务，推入主线程执行。 上述过程的不断重复就是我们说的 Event Loop (事件循环)。 </p>
+<p> JavaScript 是一门单线程语言，异步操作都是放到事件循环队列里面，等待主执行栈来执行的，并没有专门的异步执行线程。 </p>
+<h2 id="6-BFC"><a href="#6-BFC" class="headerlink" title="6.BFC"></a>6.BFC</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">BFC指的是块级格式化上下文，一个元素形成了BFC之后，那么它内部元素产生的布局不会影响到外部元素，外部元素的布局也不会影响到BFC中的内部元素。一个BFC就像是一个隔离区域，和其他区域互不影响。</span><br><span class="line">一般来说根元素是一个BFC区域，浮动和绝对定位的元素也会形成BFC，display属性的值为inline-block、flex这些</span><br><span class="line">属性时也会创建BFC。还有就是元素的overflow的值不为visible时都会创建BFC</span><br></pre></td></tr></table></figure>
+
+<h2 id="7-position的属性，fixed是相对于什么定位的"><a href="#7-position的属性，fixed是相对于什么定位的" class="headerlink" title="7.position的属性，fixed是相对于什么定位的"></a>7.position的属性，fixed是相对于什么定位的</h2><h2 id="8-闭包"><a href="#8-闭包" class="headerlink" title="8.闭包"></a>8.闭包</h2><p>使用JS实现一个 repeat 方*** log 4次 hello world, 每次间隔3秒</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">func1</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params">time</span>)</span>&#123;</span><br><span class="line">        <span class="keyword">var</span> count = <span class="number">0</span></span><br><span class="line">        <span class="keyword">var</span> IN = setInterval(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">            <span class="built_in">console</span>.log(<span class="string">'kkk'</span>)</span><br><span class="line">            count === time ? clearInterval(IN) : count++</span><br><span class="line">        &#125;,<span class="number">3000</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> f1 = func1()</span><br><span class="line">f1(<span class="number">4</span>)<span class="comment">//利用闭包执行</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">let</span> i=<span class="number">0</span>;i&lt;<span class="number">4</span>;i++)&#123;</span><br><span class="line">    setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'kkk'</span>)</span><br><span class="line">    &#125;,<span class="number">3000</span>*i)</span><br><span class="line">&#125;<span class="comment">//每隔3秒执行一次</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="9-new之后发生了什么"><a href="#9-new之后发生了什么" class="headerlink" title="9.new之后发生了什么"></a>9.new之后发生了什么</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; （1）首先创建了一个新的空对象</span><br><span class="line">&#x2F;&#x2F; （2）设置原型，将对象的原型设置为函数的 prototype 对象。</span><br><span class="line">&#x2F;&#x2F; （3）让函数的 this 指向这个对象，执行构造函数的代码（为这个新对象添加属性）</span><br><span class="line">&#x2F;&#x2F; （4）判断函数的返回值类型，如果是值类型，返回创建的对象。如果是引用类型，就返回这个引用类型的对象</span><br></pre></td></tr></table></figure>
+
+<h2 id="10-es6有什么觉得好用"><a href="#10-es6有什么觉得好用" class="headerlink" title="10.es6有什么觉得好用"></a>10.es6有什么觉得好用</h2><p><strong>箭头函数</strong></p>
+<p><strong>let,const</strong></p>
+<p> 不可以重复声明变量 </p>
+<p> 不存在变量提升 </p>
+<p> 可以定义常量 ( 不能给常量重新赋值，但如果是引用类型的话可以进行修改 )</p>
+<p> 块级作用域 </p>
+<p> <strong>解构赋值</strong> </p>
+<p>用于数组的结构</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//  普通写法</span></span><br><span class="line"><span class="keyword">let</span> nameArr = [<span class="string">'撩课'</span>, <span class="string">'小撩'</span>, <span class="string">'小煤球'</span>];</span><br><span class="line"><span class="keyword">let</span> name1 = nameArr[<span class="number">0</span>];</span><br><span class="line"><span class="keyword">let</span> name2 = nameArr[<span class="number">1</span>];</span><br><span class="line"><span class="keyword">let</span> name3 = nameArr[<span class="number">2</span>];</span><br><span class="line"><span class="comment">//  解构写法</span></span><br><span class="line"><span class="keyword">let</span> [name1, name2, name3] = nameArr;</span><br><span class="line"><span class="built_in">console</span>.log(name1, name2, name3);</span><br></pre></td></tr></table></figure>
+
+<p><strong>延展操作符</strong></p>
+<p>延展数组：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr1 = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]</span><br><span class="line"><span class="keyword">var</span> arr2 = [<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>]</span><br><span class="line"><span class="keyword">var</span> newarr = [...arr1,...arr2]</span><br><span class="line"><span class="built_in">console</span>.log(newarr)<span class="comment">//输出为1,2,3,4,5,6,7,8,9</span></span><br></pre></td></tr></table></figure>
+
+<p>延展对象：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj1 = &#123;<span class="attr">name</span>:<span class="string">'kkk'</span>, <span class="attr">age</span>:<span class="number">22</span>,<span class="attr">sex</span>:<span class="string">'男'</span>&#125;</span><br><span class="line"><span class="keyword">var</span> obj2 = &#123;<span class="attr">name</span>:<span class="string">'www'</span>, <span class="attr">age</span>:<span class="number">9999</span>&#125;</span><br><span class="line"><span class="keyword">var</span> newobj = &#123;...obj1,...obj2&#125;</span><br><span class="line"><span class="built_in">console</span>.log(newobj)<span class="comment">//输出为&#123;name:'www', age:9999,sex:'男'&#125;，因为如果对象的属性一样会覆盖</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>字符串操作</strong></p>
+<p>startsWith()：判断字符串是否以 XX 开头</p>
+<p>endsWith()：判断字符串是否以 XX 结尾</p>
+<p>includes()：判断字符串中是否包含 XX</p>
+<p>repeat( n )：拷贝n份</p>
+<p><strong>函数操作</strong></p>
+<p>设置默认参数</p>
+<h2 id="11-proto是用来作什么的"><a href="#11-proto是用来作什么的" class="headerlink" title="11.proto是用来作什么的"></a>11.<strong>proto</strong>是用来作什么的</h2><p>指向原型对象</p>
+<h2 id="12-强缓存-协商缓存"><a href="#12-强缓存-协商缓存" class="headerlink" title="12.强缓存/协商缓存"></a>12.强缓存/协商缓存</h2><p>强缓存就是浏览器直接使用缓存，协商缓存就是浏览器先询问服务器可不可以使用缓存，如果可以再使用</p>
+<p>  13.bind、apply、call </p>
+<h2 id="14-如何实现bind（说的思路"><a href="#14-如何实现bind（说的思路" class="headerlink" title="14.如何实现bind（说的思路"></a>14.如何实现bind（说的思路</h2><p>首先我们可以通过给目标函数指定作用域来简单实现<code>bind()</code>方法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Function.prototype.bind &#x3D; function(context)&#123;</span><br><span class="line">  self &#x3D; this;  &#x2F;&#x2F;保存this，即调用bind方法的目标函数</span><br><span class="line">  return function()&#123;</span><br><span class="line">      return self.apply(context,arguments);</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h2 id="15-如何进行拷贝"><a href="#15-如何进行拷贝" class="headerlink" title="15.如何进行拷贝"></a>15.如何进行拷贝</h2><p>浅拷贝是只拷贝数据的地址，修改拷贝对象会影响待拷贝对象</p>
+<p>深拷贝是完全拷贝，冲突的数据不会覆盖会合并，修改拷贝对象不会影响待拷贝对象</p>
+<h2 id="16-浏览器是多线程的吗"><a href="#16-浏览器是多线程的吗" class="headerlink" title="16.浏览器是多线程的吗"></a>16.浏览器是多线程的吗</h2><p>浏览器是多线程，谷歌浏览器为每个页面都开了一个进程，因为如果是单进程的话，某一个页面崩溃就会导致整个浏览器崩溃。</p>
+<p>  17.node是多线程的吗&amp;为什么 </p>
+<p>是， Nodejs所谓的单线程，只是主线程是单线程，所有的网络请求或者异步任务都交给了内部的线程池去实现，本身只负责不断的往返调度，由事件循环不断驱动事件执行。 </p>
+<p>  18.js是单线程还是多线程 </p>
+<p>单</p>
+<p>  19.同源策略&amp;跨域的解决方案 </p>
+<ul>
+<li><p>协议相同</p>
+</li>
+<li><p>域名相同</p>
+</li>
+<li><p>端口相同</p>
+<p>20.进程与线程的区别</p>
+</li>
+</ul>
 
       
 
@@ -255,6 +295,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">字节跳动 大哥</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -305,7 +356,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://wufuguo0213.github.io/asuiBlog.github.io/2020/03/28/%E9%9D%A2%E7%BB%8F/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://wufuguo0213.github.io/asuiBlog.github.io/2020/06/29/%E5%AD%97%E8%8A%82%E8%B7%B3%E5%8A%A8%E9%9D%A2%E8%AF%95/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -319,18 +370,18 @@
   
 <nav id="article-nav">
   
-    <a href="/asuiBlog.github.io/2020/03/29/eslint%E5%B8%B8%E8%A7%81%E8%A7%84%E5%88%99/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/asuiBlog.github.io/2020/07/05/%E5%89%8D%E7%AB%AFAI/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          eslint配置
+          前端AI
         
       </div>
     </a>
   
   
-    <a href="/asuiBlog.github.io/2020/03/24/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%9A%84%E7%AC%AC%E4%B8%89%E6%96%B9%E6%A1%86%E6%9E%B6/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">小程序常见的框架</div>
+    <a href="/asuiBlog.github.io/2020/06/22/%E7%8C%AB%E7%9C%BC/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">猫眼面经</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -357,7 +408,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#MVVM"><span class="toc-number">1.</span> <span class="toc-text">MVVM</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#数据的双向绑定"><span class="toc-number">2.</span> <span class="toc-text">数据的双向绑定</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#异步渲染"><span class="toc-number">3.</span> <span class="toc-text">异步渲染</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#nextTick"><span class="toc-number">4.</span> <span class="toc-text">nextTick</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#宏任务"><span class="toc-number">4.1.</span> <span class="toc-text">宏任务</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#微任务"><span class="toc-number">4.2.</span> <span class="toc-text">微任务</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#computed、watch和method的区别"><span class="toc-number">5.</span> <span class="toc-text">computed、watch和method的区别</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#watch中的deep：true"><span class="toc-number">6.</span> <span class="toc-text">watch中的deep：true</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#生命周期可以做什么"><span class="toc-number">7.</span> <span class="toc-text">生命周期可以做什么</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#created"><span class="toc-number">7.1.</span> <span class="toc-text">created</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#mounted"><span class="toc-number">7.2.</span> <span class="toc-text">mounted</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#beforeUpdate"><span class="toc-number">7.3.</span> <span class="toc-text">beforeUpdate</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#beforeDestoryed"><span class="toc-number">7.4.</span> <span class="toc-text">beforeDestoryed</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#V-for和V-if为什么不能连用"><span class="toc-number">8.</span> <span class="toc-text">V-for和V-if为什么不能连用</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Vue降低diff算法的时间复杂度"><span class="toc-number">9.</span> <span class="toc-text">Vue降低diff算法的时间复杂度</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#v-for为什么要key"><span class="toc-number">10.</span> <span class="toc-text">v-for为什么要key</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#描述组件的渲染和更新过程"><span class="toc-number">11.</span> <span class="toc-text">描述组件的渲染和更新过程</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#组件里的data为什么是一个函数"><span class="toc-number">12.</span> <span class="toc-text">组件里的data为什么是一个函数</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#v-model"><span class="toc-number">13.</span> <span class="toc-text">v-model</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#为什么要使用异步组件"><span class="toc-number">14.</span> <span class="toc-text">为什么要使用异步组件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#作用域插槽"><span class="toc-number">15.</span> <span class="toc-text">作用域插槽</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#keep-alive"><span class="toc-number">16.</span> <span class="toc-text">keep-alive</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#常见性能优化"><span class="toc-number">17.</span> <span class="toc-text">常见性能优化</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#字节是梦想啊啊啊"><span class="toc-number">1.</span> <span class="toc-text">字节是梦想啊啊啊</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#字节面试刷题"><span class="toc-number">2.</span> <span class="toc-text">字节面试刷题</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-instanceOf实现的原理"><span class="toc-number">2.1.</span> <span class="toc-text">1.instanceOf实现的原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-typeof"><span class="toc-number">2.2.</span> <span class="toc-text">2.typeof</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-js的类型"><span class="toc-number">2.3.</span> <span class="toc-text">3.js的类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-给了一段setTimeout、Promise判断输出顺序"><span class="toc-number">2.4.</span> <span class="toc-text">4.给了一段setTimeout、Promise判断输出顺序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-事件循环"><span class="toc-number">2.5.</span> <span class="toc-text">5.事件循环</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-BFC"><span class="toc-number">2.6.</span> <span class="toc-text">6.BFC</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-position的属性，fixed是相对于什么定位的"><span class="toc-number">2.7.</span> <span class="toc-text">7.position的属性，fixed是相对于什么定位的</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-闭包"><span class="toc-number">2.8.</span> <span class="toc-text">8.闭包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-new之后发生了什么"><span class="toc-number">2.9.</span> <span class="toc-text">9.new之后发生了什么</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10-es6有什么觉得好用"><span class="toc-number">2.10.</span> <span class="toc-text">10.es6有什么觉得好用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11-proto是用来作什么的"><span class="toc-number">2.11.</span> <span class="toc-text">11.proto是用来作什么的</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12-强缓存-协商缓存"><span class="toc-number">2.12.</span> <span class="toc-text">12.强缓存&#x2F;协商缓存</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#14-如何实现bind（说的思路"><span class="toc-number">2.13.</span> <span class="toc-text">14.如何实现bind（说的思路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#15-如何进行拷贝"><span class="toc-number">2.14.</span> <span class="toc-text">15.如何进行拷贝</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#16-浏览器是多线程的吗"><span class="toc-number">2.15.</span> <span class="toc-text">16.浏览器是多线程的吗</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
